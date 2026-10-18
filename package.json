@@ -1,0 +1,52 @@
+{
+  "name": "metu-mcp",
+  "version": "0.1.0",
+  "description": "ODTÜ (METU) öğrenci bilgi MCP sunucusu: duyurular, akademik takvim, yemekhane, park/araç pulu, harita, ring",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "metu-mcp": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "packageManager": "pnpm@10.30.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/cli.ts",
+    "serve": "tsx src/cli.ts serve",
+    "worker": "tsx src/cli.ts worker",
+    "refresh": "tsx src/cli.ts refresh",
+    "check-links": "tsx src/cli.ts check-links",
+    "links:md": "tsx scripts/build-links-md.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "inspector": "npx @modelcontextprotocol/inspector tsx src/cli.ts serve --stdio",
+    "local:install": "scripts/macos/install.sh",
+    "local:restart": "pnpm build && launchctl kickstart -k gui/$(id -u)/local.metu-mcp.worker",
+    "local:logs": "tail -f ~/Library/Logs/metu-mcp/worker.log",
+    "mcpb": "pnpm build && tsx scripts/build-mcpb.ts"
+  },
+  "dependencies": {
+    "@date-fns/tz": "^1.5.0",
+    "@hono/node-server": "^2.1.3",
+    "@modelcontextprotocol/server": "2.2.0",
+    "cheerio": "^1.2.0",
+    "croner": "^10.0.1",
+    "date-fns": "^4.4.0",
+    "fast-xml-parser": "^5.11.2",
+    "hono": "^4.13.12",
+    "ical-generator": "^11.1.2",
+    "p-limit": "^7.3.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.2.0",
+    "@types/node": "^24.19.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="static/style.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2026-10-05T16:25:27Z</responseDate><request verb="ListRecords" metadataPrefix="oai_dc" set="com_11511_16">https://open.metu.edu.tr/oai/request</request><ListRecords><record><header><identifier>oai:https://open.metu.edu.tr:11511/60501</identifier><datestamp>2020-11-09T17:30:26Z</datestamp><setSpec>com_11511_16</setSpec><setSpec>col_11511_28696</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>FEN BİLİMLERİ ENSTİTÜSÜ/LİSANSÜSTÜ TEZ PROJESİ</dc:title>
+   <dc:creator>Muyan, Mesut</dc:creator>
+   <dc:creator>Güpür, Gizem</dc:creator>
+   <dc:description>YPEL GEN AİLESİNİN YAPISAL VE İŞLEVSEL KARAKTERİZASYONU</dc:description>
+   <dc:date>2020-11-09T14:30:25Z</dc:date>
+   <dc:date>2020-11-09T14:30:25Z</dc:date>
+   <dc:date>2015-12-31</dc:date>
+   <dc:type>Project</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/60501</dc:identifier>
+   <dc:language>tur</dc:language>
+   <dc:rights>Attribution-NonCommercial-NoDerivatives 4.0 International</dc:rights>
+   <dc:rights>http://creativecommons.org/licenses/by-nc-nd/4.0/</dc:rights>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/17234</identifier><datestamp>2021-05-20T12:42:25Z</datestamp><setSpec>com_11511_88</setSpec><setSpec>com_11511_9</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89042</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Measurement of sm electro-weak parameters in reactor antineutrino-electron scattering in texono experiment</dc:title>
+   <dc:title>SM elektro-zayıf parametrelerin texono deneyinde reaktör antinötrinosu-elektron saçılımından ölçülmesi.</dc:title>
+   <dc:creator>Deniz, Muhammed</dc:creator>
+   <dc:contributor>Serin, Meltem</dc:contributor>
+   <dc:contributor>Department of Physics</dc:contributor>
+   <dc:subject>Atomic Energy.</dc:subject>
+   <dc:description>In this thesis a search for electron type neutrino-electron scattering cross-section and Weinberg Angle measurements were performed at KS Nuclear Power Station with 200 kg CsI(Tl) scintillating crystal detector located at a distance of 28 m from the 2.9 GW reactor core giving total flux of 6:52X10^12 cm^-2s^-1 in average at the experimental site. New analysis techniques and background suppression methods were developed. In the region of 3-8 MeV a measurement of SM cross section of (1:235+-0.577) XR_SM and Weinberg Angle of 0:264 +-0.075 which is quite consistent with the SM value of 0.23120(15)were obtained. These are the best results with wold wide level sensitivities at untested low energy region by using reactor anti-neutrinos.</dc:description>
+   <dc:description>Ph.D. - Doctoral Program</dc:description>
+   <dc:date>2019-07-05T19:34:00Z</dc:date>
+   <dc:date>2019-07-05T19:34:00Z</dc:date>
+   <dc:date>2007</dc:date>
+   <dc:date>2007</dc:date>
+   <dc:type>Ph.D. Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12608386/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/17234</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/105559</identifier><datestamp>2023-10-12T10:12:00Z</datestamp><setSpec>com_11511_16</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>NON-DESTRUCTIVE ASSESSMENT METHODS FOR STATE OF DETERIORATION AND CONSOLIDATION TREATMENTS OF HISTORICAL TIMBER BRIDGES</dc:title>
+   <dc:title>TARİHİ AHŞAP KÖPRÜLERİN HASAR DURUMLARI VE SAĞLAMLAŞTIRMA UYGULAMALARININ TAHRİBATSIZ YÖNTEMLER KULLANILARAK DEĞERLENDİRİLMESİ</dc:title>
+   <dc:creator>YILMAZ, SÜHEYLA</dc:creator>
+   <dc:contributor>TAVUKÇUOĞLU, AYŞE</dc:contributor>
+   <dc:contributor>CANER SALTIK, EMİNE NEVİN</dc:contributor>
+   <dc:contributor>Department of Archaeometry</dc:contributor>
+   <dc:subject>Historical Timber Güvem Bridge, timber conservation, non-destructive methods, Paraloid B-72, nano sized ZnO solution.</dc:subject>
+   <dc:subject>Arbis Subjects::Engineering and Technology</dc:subject>
+   <dc:subject>Arbis Subjects::Natural Sciences</dc:subject>
+   <dc:subject>Arbis Subjects::Social Sciences and Humanities</dc:subject>
+   <dc:description>Testing the efficiency of timber strengthening applications requires monitoring the changes in the performance properties of deteriorated timber before and after the consolidation process in the laboratory and on-site. To achieve this, using non-destructive analysis methods, being able to make quantitative analyses by the use of these methods, and determining measurable parameters for performance analysis are the essential research topics that need to be enhanced in this field. However, there is a scarcity of reference data in the literature that can be guiding in this context, particularly for enabling the use of non-destructive methods as precise and quantitative analytical tools.
+Within the scope of the study, the original black pine and the new yellow pine samples were taken from the structural timber elements of the Historical Güvem Timber Bridge, which is located in Çankırı Province and has survived since 19th century by keeping its original details. The state of deterioration of these samples was assessed, and following the consolidation by Paraloid B72 and Paraloid B72+ Nano-sized ZnO solution, the performance of the treated samples were examined. The main goal of the study is to outline the non-destructive examination that will allow on-site quantitative analysis of the structural timber elements of historical timber bridges, to examine the complementary aspects of ultrasonic testing and thermal imaging techniques when used together, and to establish reference data for in-situ assessment of historic timber bridges. In this regard, basic physical, physicomechanical, mechanical properties including compatibility characteristics of timber samples were examined before and after consolidation treatment with laboratory analyses. The study involves visual inspection supported by optical microscopy analyses and laboratory tests involving bulk density, color measurements, equilibrium moisture content in various relative humidity conditions, water vapour diffusion resistant coefficient, rate of warming up/cooling down (thermal inertia characteristics), ultrasonic pulse velocity, compression test, dynamic modulus of elasticity analyses.
+PB72 and PB72.ZnO consolidation products provided a noticeable improvement in the physical, physico-mechanical, mechanical and thermal performance properties of deteriorated black pine samples while did not change their breathing properties. After consolidation treatments, improvements observed in the performance properties of deteriorated black pine timber samples accompanied by a decrease in heating and cooling rates and an increase in ultrasonic velocities. Reference data has been established for in-situ measurements of timber on site using infrared thermography and ultrasonic testing.</dc:description>
+   <dc:description>Ahşap sağlamlaştırma uygulamalarının verimliliklerin sınanması, sağlamlaştırma işlemi öncesi ve sonrası bozulmuş ahşabın performans özelliklerindeki değişimlerin laboratuvar ortamında ve yerinde takibini gerektirir. Bu amaçla, tahribatsız analiz yöntemlerinin kullanılması, bu yöntemlerle nicel analizler yapılabilmesi ve performans analizleri için belirleyici ölçülebilir parametrelerin tayin edilmesi, bu sahada geliştirilmesi gereken araştırma konularıdır. Ancak literatürde bu kapsamda yol gösterici olabilecek referans veriler, özellikle tahribatsız yöntemleri hassas ve nicel analiz yöntemleri olarak devreye sokabilecek veriler yok denecek kadar azdır.
+Bu çalışma kapsamında Çankırı İli’nde bulunan ve 19. yüzyıldan günümüze özgün detayları ile ulaşabilmiş olan Tarihi Güvem Ahşap Köprüsü’nün taşıyıcı ahşap elemanlarından alınan karaçam cinsi özgün ahşaplar ile sarıçam cinsi yeni ahşap numunelerin bozulmuşluk/sağlamlık durumları tespit edilmiş, numunelere Paraloid B72 ve Paraloid B72+ nano taneli ZnO çözeltisi uygulanarak sağlamlaştırma işlemi uygulanmıştır. Çalışmanın temel hedefi; tarihi ahşap köprülerin taşıyıcı ahşap elemanlarının yerinde nicel analizine imkan verecek olan tahribatsız incelemenin ana hatlarıyla tarifini/kurgusunu yapabilmek, tahribatsız yöntemlerden ultrasonik muayene ve ısıl görüntüleme yöntemlerini bir arada kullanarak her iki yöntemin birbirlerini tamamladıkları alanları keşfetmek ve referans verileri oluşturmaktır. Bu kapsamda; köprüden alınan sağlam ve hasarlı ahşap numunelerin sağlamlaştırma öncesi ve sonrasında, fiziksel, fiziko-mekanik ve mekanik özellikleri laboratuvar çalışmaları ile test edilmiştir. Laboratuvar analizleri; optik mikroskop ölçümleri ile desteklenen görsel analiz çalışmaları, yoğunluk, renk ölçümleri, farklı bağıl nem koşullarında denge rutubeti, su buharı difüzyonu direnç katsayısı, ısınma /soğuma hızı (ısıl atalet özellikleri), ultrasonik hız, basınç dayanımı, dinamik elastiklik modülü analizlerinden oluşmaktadır.
+PB72 ve PB72.ZnO sağlamlaştırma ürünleri, fizikomekanik, mekanik ve ısıl performans özellikleri zayıflamış olan hasarlı özgün karaçam numunelerinde fark edilir düzeyde bir iyileştirme sağlamış, nefes alma özelliklerini değiştirmemiştir. Sağlamlaştırma işlemleri sonrasında hasarlı ahşabın malzeme özelliklerinde tespit edilen iyileşme, ısıma ve soğuma hızlarında azalma ve ultrasonik hızlarında artma ile izlenebilmiştir. Ahşabın yerinde kızıl ötesi ısıl görüntüleme ve ultrasonik muayene ile takibini mümkün kılacak referans veriler oluşturulmuştur.</dc:description>
+   <dc:description>Ph.D. - Doctoral Program</dc:description>
+   <dc:date>2023-10-12T07:12:00Z</dc:date>
+   <dc:date>2023-10-12T07:12:00Z</dc:date>
+   <dc:date>2023-9-11</dc:date>
+   <dc:type>Ph.D. Thesis</dc:type>
+   <dc:type>Ph.D. Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/105559</dc:identifier>
+   <dc:rights>Attribution-NonCommercial-NoDerivatives 4.0 International</dc:rights>
+   <dc:rights>http://creativecommons.org/licenses/by-nc-nd/4.0/</dc:rights>
+   <dc:format>237</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/16114</identifier><datestamp>2021-05-20T14:25:27Z</datestamp><setSpec>com_11511_16</setSpec><setSpec>com_11511_113</setSpec><setSpec>com_11511_12</setSpec><setSpec>col_11511_158</setSpec><setSpec>col_11511_89066</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Spectral (h-p) element methods approach to the solution of Poisson and Helmholtz equations using Matlab</dc:title>
+   <dc:title>Spektral (h-p) eleman metodu yaklaşımıyla Poisson ve Helmholtz denlemlerinin Matlab kullanılarak çözümü.</dc:title>
+   <dc:creator>Maral, Tuğrul</dc:creator>
+   <dc:contributor>Tarı, İlker</dc:contributor>
+   <dc:contributor>Department of Mechanical Engineering</dc:contributor>
+   <dc:subject>Numerical Analysis.</dc:subject>
+   <dc:subject>Mechanical Engineering.</dc:subject>
+   <dc:description>A spectral element solver program using MATLAB is written for the solution of Poisson and Helmholtz equations. The accuracy of spectral methods (p-type high order) and the geometric flexibility of the low-order h-type finite elements are combined in spectral element methods. Rectangular elements are used to solve Poisson and Helmholtz equations with Dirichlet and Neumann boundary conditions which are homogeneous or non homogeneous. Robin (mixed) boundary conditions are also implemented. Poisson equation is also solved by discretising the domain with curvilinear quadrilateral elements so that the accuracy of both isoparametric quadrilateral and rectangular element stiffness matrices and element mass matrices are tested. Quadrilateral elements are used to obtain the stream functions of the inviscid flow around a cylinder problem. Nonhomogeneous Neumann boundary conditions are imposed to the quadrilateral element stiffness matrix to solve the velocity potentials.</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T19:21:26Z</dc:date>
+   <dc:date>2019-07-05T19:21:26Z</dc:date>
+   <dc:date>2006</dc:date>
+   <dc:date>2006</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/3/12607945/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/16114</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/16417</identifier><datestamp>2021-05-20T11:08:49Z</datestamp><setSpec>com_11511_108</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89061</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>	Active vibration control of a smart beam : a spatial approach</dc:title>
+   <dc:title>Akıllı bir kirişin aktif titreşim kontrolü : uzamsal bir yaklaşım</dc:title>
+   <dc:creator>Kırcalı, Ömer Faruk</dc:creator>
+   <dc:contributor>Yaman, Yavuz</dc:contributor>
+   <dc:contributor>Department of Aerospace Engineering</dc:contributor>
+   <dc:subject>Aeronautics.</dc:subject>
+   <dc:subject>Aeronautical Engineering.</dc:subject>
+   <dc:description>This study presented the design and implementation of a spatial Hinf controller to suppress the free and forced vibrations of a cantilevered smart beam. The smart beam consists of a passive aluminum beam with surface bonded PZT (Lead-Zirconate-Titanate) patches. In this study, the PZT patches were used as the actuators and a laser displacement sensor was used as the sensor. In the first part of the study, the modeling of the smart beam by the assumed-modes method was conducted. The model correction technique was applied to include the effect of out-of-range modes on the dynamics of the system. Later, spatial system identification work was performed in order to clarify the spatial characteristics of the smart beam. In the second part of the study, a spatial Hinf controller was designed for suppressing the first two flexural vibrations of the smart beam. The efficiency of the controller was verified both by simulations and experimental implementation. As a final step, the comparison of the spatial and pointwise Hinf controllers was employed. A pointwise Hinf controller was designed and experimentally implemented. The efficiency of the both controllers was compared by simulations.</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T19:24:47Z</dc:date>
+   <dc:date>2019-07-05T19:24:47Z</dc:date>
+   <dc:date>2006</dc:date>
+   <dc:date>2006</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12607555/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/16417</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/26880</identifier><datestamp>2021-05-20T13:55:49Z</datestamp><setSpec>com_11511_104</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89057</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Identification and source apportionment of trace elements in urban and suburban area of Ankara</dc:title>
+   <dc:title>Ankara’da eser elementler için kaynak belirleme çalışması.</dc:title>
+   <dc:creator>Goli, Tayebeh</dc:creator>
+   <dc:contributor>Tuncel, Süleyman Gürdal</dc:contributor>
+   <dc:contributor>Aslan Kılavuz, Seda</dc:contributor>
+   <dc:contributor>Department of Environmental Engineering</dc:contributor>
+   <dc:subject>Aerosols.</dc:subject>
+   <dc:subject>Trace elements.</dc:subject>
+   <dc:subject>Air</dc:subject>
+   <dc:description>In this study, Chemistry and Composition of Atmospheric fine aerosol particles in urban and suburban stations in Ankara are identified and generated data set are used to determine sources of fine particles, using receptor modeling. For this purpose, 24- hr aerosol samples were collected on Nuclepore filters using a ‘Stack Filter Unit’. Sampling continued for 15 months from July 2014 to October 2015. Samples were collected at two stations. One of the stations was located at Ankara university campus, which is an urban location, and the second station was located at METU campus, which can be considered as a suburban location. Collected filters were analyzed for 63 major, minor and trace elements, with atomic numbers ranging between 3 for Li and 92 for U. vi Measured concentrations elements are compared with corresponding data generated in other urban and suburban locations around the world, Turkey, and with performed studies in city of Ankara since 1975. As a result of these comparisons, average concentrations of elements are not significantly different from concentration reported in the literature. Concentrations of both crustal and pollution-derived elements decreased significantly between 1975 and 2015 in Ankara. Concentrations of elements show short- and long-term variations. Some of these variations are due to temporal variations in emissions and some due to temporal variations in meteorology. Meteorological parameters wind speed, wind direction, mixing height and ventilation coefficient strongly affect measured concentrations of elements. Relation between measured concentrations of elements did not show a meaningful relationship with wind direction at urban station, because sources were all around the station. However, relationship between measured concentrations of elements and wind direction was very clear in suburban station. Conditional probability function calculations demonstrated that Mamak area and OSTIM are two important source areas affecting composition of particles at METU. Positive matrix factorization (PMF) was used for source apportionment of elements to identify sources contributing to measured concentrations of them. This analysis indicates 6 sources for both stations; contaminated surface soil, a crustal factor, coal burning, oil combustion, diesel, and traffic for METU, and crustal factor, coal combustion, Road dust, traffic, contaminated soil, and diesel. Key Words: Source Apportionments, Trace Elements, Positive Matrix Factorization</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T21:31:35Z</dc:date>
+   <dc:date>2019-07-05T21:31:35Z</dc:date>
+   <dc:date>2017</dc:date>
+   <dc:date>2017</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12621683/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/26880</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/13068</identifier><datestamp>2021-05-20T12:37:51Z</datestamp><setSpec>com_11511_90</setSpec><setSpec>com_11511_9</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89044</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Enantioselective synthesis of chiral azacyclohexenone precursors.</dc:title>
+   <dc:creator>Kaya, Handan</dc:creator>
+   <dc:contributor>Demir, Ayhan S.</dc:contributor>
+   <dc:contributor>Department of Chemistry</dc:contributor>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T18:46:38Z</dc:date>
+   <dc:date>2019-07-05T18:46:38Z</dc:date>
+   <dc:date>2002</dc:date>
+   <dc:date>2002</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/13068</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>72 pages</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/19796</identifier><datestamp>2021-05-20T10:38:25Z</datestamp><setSpec>com_11511_103</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89056</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>A new approach for better load balancing of visibility detection and target acquisition calculations</dc:title>
+   <dc:title>Görülebilirlik ve hedef tespiti hesaplamalarının yük dengelemesinin daha iyi yapılabilmesi için yeni bir yaklaşım.</dc:title>
+   <dc:creator>Filiz, Anıl Yiğit</dc:creator>
+   <dc:contributor>Can, Tolga</dc:contributor>
+   <dc:contributor>Department of Computer Engineering</dc:contributor>
+   <dc:subject>Electronic computers.</dc:subject>
+   <dc:subject>Computer science.</dc:subject>
+   <dc:description>Calculating visual perception of entities in simulations requires complex intersection tests between the line of sight and the virtual world. In this study, we focus on outdoor environments which consist of a terrain and various objects located on terrain. Using hardware capabilities of graphics cards, such as occlusion queries, provides a fast method for implementing these tests. In this thesis, we introduce an approach for better load balancing of visibility detection and target acquisition calculations by the use of occlusion queries. Our results show that, the proposed approach is 1.5 to 2 times more efficient than the existing algorithms on the average.</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T20:03:00Z</dc:date>
+   <dc:date>2019-07-05T20:03:00Z</dc:date>
+   <dc:date>2010</dc:date>
+   <dc:date>2010</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12612255/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/19796</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/11001</identifier><datestamp>2021-05-20T10:53:37Z</datestamp><setSpec>com_11511_105</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89058</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>A new algebric language erpal and translation of a subset of SDL-92 ERPAL</dc:title>
+   <dc:creator>Yenigün, Hüsnü</dc:creator>
+   <dc:contributor>Bilgen, Semih</dc:contributor>
+   <dc:contributor>Department of Electrical and Electronics Engineering</dc:contributor>
+   <dc:date>2019-07-05T18:26:02Z</dc:date>
+   <dc:date>2019-07-05T18:26:02Z</dc:date>
+   <dc:date>1995</dc:date>
+   <dc:date>1995</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/11001</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>158 pages</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/2037</identifier><datestamp>2021-05-20T11:37:41Z</datestamp><setSpec>com_11511_109</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89062</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>An Experimental and nonlinear analytical study on composite slabs with expanded metal used as metal decking</dc:title>
+   <dc:creator>Tengirşenk, Özgür</dc:creator>
+   <dc:contributor>Keyder, Engin</dc:contributor>
+   <dc:contributor>Department of Civil Engineering</dc:contributor>
+   <dc:date>2019-07-05T17:03:30Z</dc:date>
+   <dc:date>2019-07-05T17:03:30Z</dc:date>
+   <dc:date>1999</dc:date>
+   <dc:date>1999</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/2037</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>91 pages</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/23882</identifier><datestamp>2021-05-20T13:30:55Z</datestamp><setSpec>com_11511_102</setSpec><setSpec>com_11511_8</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89055</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Evaluating success criteria of urban regeneration in terms of gentrification and sustainability: cases of Çukurambar and Kızılırmak neighborhoods</dc:title>
+   <dc:title>Kentsel yenilemenin başarı kriterlerini soylulaştırma ve sürdürülebilirlik açısından değerlendirmek: Çukurambar ve Kızılırmak mahalleleri örneği.</dc:title>
+   <dc:creator>Durmaz, Büşra</dc:creator>
+   <dc:contributor>Pınarcıoğlu, Mehmet Melih</dc:contributor>
+   <dc:contributor>Department of City and Regional Planning</dc:contributor>
+   <dc:subject>Cities and towns</dc:subject>
+   <dc:subject>Urbanization.</dc:subject>
+   <dc:subject>Urban economics.</dc:subject>
+   <dc:subject>Sociology, Urban.</dc:subject>
+   <dc:description>Urban spaces and districts have continuously needed changes, regeneration and development. In order to respond this need, urban regeneration projects are implemented in urban areas. Some of these projects can be referred as successful and some others as unsuccessful. In this thesis, a generalization was made considering urban regeneration examples from the world, and criteria of gentrification of sustainability were selected for the case study area of the research. The cases of Çukurambar and Kızılırmak Neighborhoods are not compatible with the general perception that old residents in urban regeneration always lose. Particularly, regeneration in the neighborhoods is a process in which people win economically. In addition, these neighborhoods, which do not have considerable problems in terms of gentrification, have sustainability difficulties after urban regeneration. These difficulties were discussed in the research in terms of the indicators of transportation, identity of place and housing. In the process of the research, in-depth interviews carried out with the residents in the area and personal observations and experiences as one of the residents in Çukurambar Neighborhood were benefitted. As a result of these observations, experiences and in-depth interviews, the success and failure of urban regeneration were objectively evaluated.</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T20:53:30Z</dc:date>
+   <dc:date>2019-07-05T20:53:30Z</dc:date>
+   <dc:date>2014</dc:date>
+   <dc:date>2014</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12617759/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/23882</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/118705</identifier><datestamp>2026-02-26T10:55:21Z</datestamp><setSpec>com_11511_16</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>RETHINKING PRIMARY SCHOOL ARCHITECTURE: AN ALTERNATIVE PROPOSAL FOR AN ENRICHED LEARNING ENVIRONMENT</dc:title>
+   <dc:title>İLKOKUL MİMARİSİNİ YENİDEN DÜŞÜNMEK: ZENGİNLEŞTİRİLMİŞ BİR ÖĞRENME ORTAMI İÇİN ALTERNATİF BİR ÖNERİ</dc:title>
+   <dc:creator>Gür Akalın, Elif Nadide</dc:creator>
+   <dc:contributor>Güzer, Celal Abdi</dc:contributor>
+   <dc:contributor>Department of Architecture</dc:contributor>
+   <dc:subject>primary school architecture, generation alpha, spatial pedagogy, cognitively responsive school architecture, learning landscape, innovative and adaptive learning environments</dc:subject>
+   <dc:subject>Arbis Subjects::Engineering and Technology::Architecture</dc:subject>
+   <dc:description>This dissertation investigates the role of primary school architecture as an active agent in the educational process, particularly in the context of 21st-century pedagogies and the unique learning characteristics of Generation Alpha. The research is grounded in the premise that school architecture should transcend its conventional function as a static container and instead operate as a cognitively responsive and pedagogically enriched environment. Historically tracing the evolution of primary school buildings in Türkiye from the early Republican era to the post-pandemic period, the study demonstrates how shifts in political ideologies, curriculum reforms and educational policies have shaped spatial paradigms. Through a comparative analysis of educational environments at the international level, the research identifies a significant misalignment between pedagogical innovation and school architecture. Drawing upon constructivist and socio-constructivist learning theories, it argues that physical learning spaces must be reconfigured to foster personalization, collaboration, inquiry and adaptability. Building on these findings, the dissertation presents a conceptual model proposal to address the identified spatial–pedagogical misalignment. The thesis introduces a holistic conceptual model of Cognitively Responsive School Architecture (CRS) that is grounded in Generation Alpha’s neuro-pedagogical needs, structured through a Learning Landscape strategy, and operationalized via embedded Innovative and Adaptive Learning Environments (IALE). This model develops a set of design principles that align spatial, technological and pedagogical dimensions to support the cognitive, emotional and social development of learners. The proposed model is examined through schematic representations, functional flowcharts, and a multi-criteria feasibility rubric that assesses spatial adaptability, pedagogical usability, and infrastructural readiness. By articulating an alternative to the standardized typologies currently employed in Turkish public primary schools, this study aims to inspire a national discourse around educational spatial reform. It contributes a holistic, future-oriented architectural framework capable of supporting the emerging educational needs of digitally native students, while aligning with international innovation in school design.</dc:description>
+   <dc:description>Bu doktora tezi, özellikle 21. yüzyıl pedagojileri ve Alfa neslinin özgün öğrenme özellikleri bağlamında, ilkokul mimarisinin eğitim sürecinde etkin bir özne olarak rolünü incelemektedir. Araştırma, okul mimarisinin geleneksel anlamda durağan bir kap olma işlevini aşması ve bunun yerine bilişsel olarak duyarlı ve pedagojik açıdan zenginleştirilmiş bir ortam olarak işlemesi gerektiği fikrine dayanmaktadır. Türkiye’de ilkokul yapılarının erken Cumhuriyet döneminden pandemi sonrası döneme uzanan evrimini tarihsel olarak izleyen çalışma; politik ideolojilerdeki değişimlerin, müfredat reformlarının ve eğitim politikalarının mekansal paradigmaları nasıl şekillendirdiğini ortaya koymaktadır. Uluslararası ölçekte eğitim mekanlarının karşılaştırmalı analizi yoluyla araştırma, pedagojik yenilik ile okul mimarisi arasındaki önemli uyumsuzluğu belirlemektedir. Yapılandırmacı ve sosyo- yapılandırmacı öğrenme kuramlarına dayanarak, fiziksel öğrenme mekanlarının kişiselleştirme, iş birliği, sorgulama ve uyarlanabilirliği destekleyecek biçimde yeniden kurgulanması gerektiğini savunmaktadır. Bu bulgular üzerine inşa edilen tez, saptanan mekansal–pedagojik uyumsuzluğu gidermek amacıyla bir kavramsal model önerisi sunmaktadır.Tez, Alfa neslinin nöro-pedagojik gereksinimlerini temel alan bütüncül bir bilişsel olarak duyarlı okul mimarisi kavramsal modeli ortaya koymaktadır. Modelin mekansal kurgusu öğrenme peyzajı stratejisiyle yapılandırılmakta; bu peyzaj içinde gömülü yenilikçi ve uyarlanabilir öğrenme ortamları aracılığıyla işletilmektedir. Bu model, öğrenenlerin bilişsel, duygusal ve sosyal gelişimini desteklemek üzere mekansal, teknolojik ve pedagojik boyutları hizalayan bir dizi tasarım ilkesini geliştirmektedir. Önerilen model; şematik temsiller, işlevsel akış diyagramları ve mekansal uyarlanabilirlik, pedagojik kullanılabilirlik ve altyapı hazırbulunuşluğunu değerlendiren çok ölçütlü bir uygulanabilirlik rubriği aracılığıyla incelenmektedir. Türkiye’de devlet okullarında halen yaygın biçimde kullanılan standartlaştırılmış tipolojilere alternatif bir yaklaşım ortaya koyarak bu çalışma, eğitim mekanı reformu üzerine ulusal bir tartışmayı teşvik etmeyi amaçlamaktadır. Çalışma, dijital yerli olarak tanımlanan öğrencilerin ortaya çıkan eğitim gereksinimlerini destekleyebilecek, aynı zamanda okul tasarımında uluslararası yenilikçi yönelimlerle uyumlu bütüncül ve gelecek odaklı bir mimari çerçeveye katkı sunmaktadır.</dc:description>
+   <dc:description>Ph.D. - Doctoral Program</dc:description>
+   <dc:date>2026-02-26T07:55:20Z</dc:date>
+   <dc:date>2026-02-26T07:55:20Z</dc:date>
+   <dc:date>2026-1-23</dc:date>
+   <dc:type>Ph.D. Thesis</dc:type>
+   <dc:type>Ph.D. Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/118705</dc:identifier>
+   <dc:rights>Attribution-NonCommercial-NoDerivatives 4.0 International</dc:rights>
+   <dc:rights>http://creativecommons.org/licenses/by-nc-nd/4.0/</dc:rights>
+   <dc:format>398</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/22880</identifier><datestamp>2022-03-24T09:47:26Z</datestamp><setSpec>com_11511_103</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89056</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Design and implementation of a novel visual analysis system for image clasiffication</dc:title>
+   <dc:title>Resim sınıflandırma için yeni bir görsel analiz sistem tasarım ve uygulaması.</dc:title>
+   <dc:creator>Altintakan, Ümit Lütfü</dc:creator>
+   <dc:contributor>Yazıcı, Adnan</dc:contributor>
+   <dc:contributor>Körpeoğlu, İbrahim</dc:contributor>
+   <dc:contributor>Department of Computer Engineering</dc:contributor>
+   <dc:subject>Image processing</dc:subject>
+   <dc:subject>Image analysis</dc:subject>
+   <dc:description>Possibilities offered by the technology to create, share and disseminate image and video data have resulted in a rapid increase in the available visual data. However, the data is useless unless it is effectively accessed, which necessitates the semantic analysis of visual data. In this dissertation, we present a novel visual analysis system along with its application to image classification problem. We aim to address the challenges in the area originated from the semantic gap, and to facilitate the research efforts in the extraction of high-level semantic information from images. Our system differs from existing works, and contributes to the area in several aspects: A complete visual analysis system in an integrated architecture, a novel fuzzy learning approach in classifier training, a unique feature weighting scheme, a probabilistic classification method, a new high-level classifier fusion, and a new bag-of words model are some of the key contributions introduced in this dissertation. The experiments conducted on benchmark datasets have shown that our approaches can significantly improve the performance in image classification.</dc:description>
+   <dc:description>Ph.D. - Doctoral Program</dc:description>
+   <dc:date>2019-07-05T20:40:58Z</dc:date>
+   <dc:date>2019-07-05T20:40:58Z</dc:date>
+   <dc:date>2013</dc:date>
+   <dc:date>2013</dc:date>
+   <dc:type>Ph.D. Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12616468/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/22880</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/26574</identifier><datestamp>2021-05-20T11:37:22Z</datestamp><setSpec>com_11511_111</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89064</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Bed-to-surface heat transfer in conical spouted and  spout-fluid beds</dc:title>
+   <dc:title>Taşkın ve taşkın-akışkan konik yataklarda yatak-yüzey ısı transferi.</dc:title>
+   <dc:creator>Yaman, Onur</dc:creator>
+   <dc:contributor>Külah, Görkem</dc:contributor>
+   <dc:contributor>Department of Chemical Engineering</dc:contributor>
+   <dc:subject>Fluidization.</dc:subject>
+   <dc:subject>Fluid dynamics.</dc:subject>
+   <dc:subject>Heat</dc:subject>
+   <dc:subject>Gas-solid interfaces.</dc:subject>
+   <dc:description>Bed-to-surface heat transfer investigation from a vertically immersed cylindrical surface was conducted in large laboratory scale conical spouted and spout-fluid beds in this study. In order to design a high performance spouted and spout-fluid beds, the effects of bed design parameters (such as conical angle, inlet diameter of spouting gas entrance) and operating conditions (such as static bed height, particle size and density and spouting and fluidization gas flow rates) on the heat transfer characteristics were investigated in detail. An empirical heat transfer correlation of the average heat transfer coefficients in the annulus section for high-density particles (2500 ≤ ρp ≤ 6000 kg/m3) was also proposed for the practical use in industrial applications. The heat transfer coefficients were found to depend on the density and size of the particles. The denser and larger particles had higher minimum stable spouting velocities, which in turn lead to higher operational spouting velocities resulting in higher heat transfer coefficient values. The effect of particle diameter was more pronounced in the spout and spout-annulus interface whereas its effect diminished in the annulus region. The conical angle had a significant effect on the gas flow distribution and particle-probe contact dynamics in the vi spouted bed and it was observed that the heat transfer values in the annulus decreased with the increase in conical angle due to lowered particle circulation. Benefits of the spout-fluid operation on the heat transfer coefficients were found fairly minor considering maximum of 7 and 3 % increase in heat transfer coefficient observed during spout-fluid operation for 31º and 66º conical angle conical spoutfluid beds, respectively, since the fluidizing gas (Gf) was not able to penetrate sufficiently inside the annulus to maintain an effective gas flow on the heat transfer surface. Therefore, from the heat transfer point of view, given the required flow rates for spout-fluid bed operation, spouted beds were found to be more feasible compared to spout-fluid beds. </dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T21:27:41Z</dc:date>
+   <dc:date>2019-07-05T21:27:41Z</dc:date>
+   <dc:date>2017</dc:date>
+   <dc:date>2017</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12621119/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/26574</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/114190</identifier><datestamp>2025-04-28T10:55:09Z</datestamp><setSpec>com_11511_16</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Assessment of tsunami events in Eastern Aegean Sea</dc:title>
+   <dc:title>Ege Denizi doğusundaki tsunami olaylarının değerlendirilmesi</dc:title>
+   <dc:creator>Üstün, Hasan Sezgin</dc:creator>
+   <dc:contributor>Yalçıner, Ahmet Cevdet</dc:contributor>
+   <dc:contributor>Department of Civil Engineering</dc:contributor>
+   <dc:subject>Tsunami</dc:subject>
+   <dc:subject>Earthquake</dc:subject>
+   <dc:subject>Aegean Sea</dc:subject>
+   <dc:subject>Disaster</dc:subject>
+   <dc:subject>Seismic</dc:subject>
+   <dc:subject>Eastern Mediterranean</dc:subject>
+   <dc:subject>Inundation</dc:subject>
+   <dc:subject>Mitigation</dc:subject>
+   <dc:subject>Arbis Subjects::Engineering and Technology::Civil Engineering::Hydraulic::Coastal Engineering</dc:subject>
+   <dc:subject>Arbis Subjects::Engineering and Technology::Civil Engineering::Hydraulic::Coastal Zone Management</dc:subject>
+   <dc:subject>Arbis Subjects::Engineering and Technology::Civil Engineering</dc:subject>
+   <dc:description>Tsunamis related to seismic events have been effective in the Aegean Sea throughout
+the history. 30 October 2020 Samos-Izmir Tsunami reminded the importance of the
+tsunami events in the Aegean sea. In this regard, the similarities in the occurence
+location, magnitudes and the coastal effects of some tsunami events in the last two
+centuries in Eastern Aegean Sea have attacted attention. There are two pair tsunamis
+to be considered as examples of these kind of tsunamis. They are the earthquake and
+tsunami events occurred in Edremit on 7 March 1867 and 6 October 1944 and the
+earthquake and tsunami events occurred in Çeşme – Sakız (Chios) region on 3 April
+1881 and 23 July 1949. In this study, these tsunami events, their generation
+mechanisms, propagations in the Aegean Sea and their coastal effects have been
+investigated using observation data and comparisons with the results of numerical
+simulations. The results of the comparisons are also discussed by considering the
+preparedness and mitigation measures against the tsunami events in the region.</dc:description>
+   <dc:description>Sismik olaylara bağlı tsunamiler tarih boyunca Ege Denizinde etkili olmuştur. 30
+Ekim 2020 Sisam – İzmir tsunamisi Ege Denizindeki tsunami olaylarının önemini
+hatırlatmıştır. Bu bağlamda, Doğu Ege’de son iki yüzyılda oluşan bazı tsunami
+olaylarının oluşma yerleri, büyüklükleri ve kıyılardaki etkilerindeki benzerlikler
+dikkat çekmiştir. Bu çeşit tsunamilere örnek olarak iki çift tsunami olayı
+değerlendirilebilir. Bunlar 7 Mart 1867 ve 6 Ekim 1944’te Edremit’te, 3 Nisan 1881
+ve 23 Temmuz 1949’da ise Çeşme – Sakız bölgesinde oluşan deprem ve tsunami
+olaylarıdır. Bu çalışmada, bu tsunami olayları, oluşma mekanizmaları, Ege
+denizindeki hareketleri ve kıyılardaki etkileri gözlem verileri ve modelleme
+simülasyonları ile kıyaslama yapılarak incelenmiştir. Kıyaslamaların sonuçları
+bölgedeki tsunami olaylarına karşı hazırlık ve alınacak önlemler için
+değerlendirilecektir.</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2025-04-22T13:20:50Z</dc:date>
+   <dc:date>2025-04-22T13:20:50Z</dc:date>
+   <dc:date>2025-4-09</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/114190</dc:identifier>
+   <dc:rights>Attribution-NonCommercial-NoDerivatives 4.0 International</dc:rights>
+   <dc:rights>http://creativecommons.org/licenses/by-nc-nd/4.0/</dc:rights>
+   <dc:format>105</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/44653</identifier><datestamp>2021-05-20T11:08:35Z</datestamp><setSpec>com_11511_108</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89061</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Development of discontinuous galerkin method 2 dimensional flow solver</dc:title>
+   <dc:title>Kesintili galerkin methodu ̇ile 2 boyutlu akış çözücü geliştirilmesi.</dc:title>
+   <dc:creator>Güngör, Osman</dc:creator>
+   <dc:contributor>Özgen, Serkan</dc:contributor>
+   <dc:contributor>Department of Aerospace Engineering</dc:contributor>
+   <dc:subject>Computational fluid dynamics.</dc:subject>
+   <dc:subject>Keywords:    Computational Fluid Dynamics</dc:subject>
+   <dc:subject>Discontinuous Galerkin</dc:subject>
+   <dc:subject>High Order Accuracy</dc:subject>
+   <dc:subject>Finite Element</dc:subject>
+   <dc:subject>Euler Equations</dc:subject>
+   <dc:subject>Aerodynamics.</dc:subject>
+   <dc:description>In this work, 2 dimensional ﬂow solutions of Euler equations are presented from the developed discontinuous Galerkin method ﬁnite element method (DGFEM) solver on unstructured grids. Euler equations govern the inviscid and adiabatic ﬂows with a set of hyperbolic equations. The discretization of governing equations for DGFEM is given in detail. The DGFEM discretization provides high order solutions on an element-compact stencil hence only elements having common boundary are coupled. The required elementwise operations and mathematical operations are revisited and derivations are provided when necessary. Among the two major approaches, modal and nodal, nodal DGFEM is employed. Gaussian quadrature is utilized in the evaluation of volume and surface integrals. The ﬂux through the cell boundaries are calculated through ﬂux functions and several ﬂux functions are implemented and compared. Proper boundary conditions are employed on the solution space boundaries. Severaltestcasesinliteratureareusedforveriﬁcationandvalidationpurposes. The high order accuracy is easily achieved in problems with smooth solutions. On the other hand, problems with shocks requires stabilization techniques which may limit the order of accuracy or degrade solution success. The satisfactory results are obtained with comparison of experimental results which are carefully selected considering the ﬁdelity of governing equations. Moreover, importance of curved wall boundary representations in high order methods are experienced. Furthermore, effect of grid adaptation around shocks or discontinues is pointed out.</dc:description>
+   <dc:description>Thesis (M.S.) -- Graduate School of Natural and Applied Sciences. Aerospace Engineering.</dc:description>
+   <dc:date>2020-10-03T08:58:18Z</dc:date>
+   <dc:date>2020-10-03T08:58:18Z</dc:date>
+   <dc:date>2019</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12624449/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/44653</dc:identifier>
+   <dc:rights>Attribution-NonCommercial-NoDerivatives 4.0 International</dc:rights>
+   <dc:rights>http://creativecommons.org/licenses/by-nc-nd/4.0/</dc:rights>
+   <dc:format>xxii, 86 p. :</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/24007</identifier><datestamp>2021-05-20T10:38:21Z</datestamp><setSpec>com_11511_103</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89056</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Employee turnover prediction using machine learning based methods</dc:title>
+   <dc:title>Makine öğrenimi tabanlı yöntemlerle çalışanların  işten ayrılma tahmini.</dc:title>
+   <dc:creator>Kısaoğlu, Zehra Özge</dc:creator>
+   <dc:contributor>Karagöz, Pınar</dc:contributor>
+   <dc:contributor>Cambazoğlu, Berkant Barla</dc:contributor>
+   <dc:contributor>Department of Computer Engineering</dc:contributor>
+   <dc:subject>Machine learning.</dc:subject>
+   <dc:subject>Binary system (Mathematics).</dc:subject>
+   <dc:subject>Labor turnover</dc:subject>
+   <dc:subject>Personnel management</dc:subject>
+   <dc:description>Employee turnover is a major problem for many companies because it brings with new issues including hiring costs, overtime costs, low productivity. Hence, preventing or reducing turnovers is a challenging task in human resource management field. At this point, employee turnover prediction plays an important role in providing early information for highly probable turnovers in near future that enables companies to take precautions against this situation. In this thesis, we work on this problem to predict whether an employee will leave his/her company within a certain time period. We formulate this binary classification problem as a supervised machine learning problem. Our study exploits publicly available employee profiles taken from the Web and job transition graphs extracted from these profiles. Main contribution of our study on predicting turnovers is the forming and use of job transitions of employees as well as the publicly available information about employees and institutions. So far, most of the turnover prediction models are built with the statistical methods or data analysis techniques and they make use of detailed employee information like age, race, job performance in company or job satisfaction survey results. To the best of our knowledge, this is the first study on predicting turnovers using job transitions and machine learning methods. With the help of job transition graph analysis and relevant features extracted from the graphs, many machine learning models under the change of year and time period parameters are composed. Several experiments with several models on different years’ employee profiles indicate that our proposed models have considerably predictive capabilities compared to different baselines.</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T20:55:05Z</dc:date>
+   <dc:date>2019-07-05T20:55:05Z</dc:date>
+   <dc:date>2014</dc:date>
+   <dc:date>2014</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12617686/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/24007</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/24138</identifier><datestamp>2021-05-20T12:37:48Z</datestamp><setSpec>com_11511_90</setSpec><setSpec>com_11511_9</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89044</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Synthesis of 2-iodomethylene-2,3-dihydro-1,4-oxazepine derivatives</dc:title>
+   <dc:title>2-iyodometilen-2,3-dihidro-1,4-okzazepin türevlerinin sentezi.</dc:title>
+   <dc:creator>Çakal, Deniz</dc:creator>
+   <dc:contributor>Zora, Metin</dc:contributor>
+   <dc:contributor>Department of Chemistry</dc:contributor>
+   <dc:subject>Platinum.</dc:subject>
+   <dc:subject>Carbon.</dc:subject>
+   <dc:subject>Methanol.</dc:subject>
+   <dc:subject>Voltammetry.</dc:subject>
+   <dc:subject>Methanol as fuel.</dc:subject>
+   <dc:subject>Electron microscopy.</dc:subject>
+   <dc:description>In this thesis, platinum nanoparticles were prepared by using PtCl4 as a starting material, sodium borohydride (Group I), hydrazine (Group II) and formaldehyde (Group III) as reducing agents and hexylamine (Group -a), N-methylhexylamine (Group -b), N,N-dimethylhexylamine (Group -c) as surfactants (the last two surfactants were used for the first time). These platinum nanoparticles were dispersed on Carbon XC-72 to be utilized as catalyst for methanol oxidation reaction which can be used in direct methanol fuel cells. The characterization, electrochemical properties and performance of catalysts were defined by using inductively coupled plasma spectroscopy (ICP), cyclic voltametry (CV), chronoamperometry (CA), X-ray diffraction (XRD), X-photoelectron Spectroscopy (XPS), transmission electron microscopy (TEM), BET surface area analysis and fourier transform infrared spectroscopy (FTIR). XRD and TEM results indicated that platinum crystallizes in face-centered cubic (fcc) structure with a size of ~5 nm. In addition to these small particles, agglomerated particles were also observed in different size, shape and density. In Group I, cubic platinum nanoparticles come together to form large particles with a size of 20 - 200 nm. In Group II, agglomerated particles were appeared to be dense, large and spherical lumps with a size of 50 - 200 nm. In Group III, the agglomerated particles were also formed in spherical shape but not as much dense and large (50 - 150 nm) as in Group II. XPS results revealed that there are two different oxidation states of platinum in each catalyst. These are Pt(0) and Pt(IV) and their percentages changes between 65 - 73 and 35 - 27, respectively. XPS data also showed the existence of two kinds of oxygen, HOads and H2Oads, with a ratio of 85:15, 90:10 and 80:20 for Group I, II and III, respectively. BET analyses indicated that the surface area of catalysts depends on reducing agent not surfactant. It was 30 - 35 m2/g, 4 - 9 m2/g and 20 - 30 m2/g for Group I, II and III, respectively. CV records demonstrated that the order of catalysts performance was Group II &lt; Group I &lt; Group III. Within all catalysts, Catalyst IIIb exhibited the highest performance (258 mA/mg Pt) towards methanol oxidation reaction and provided 3.5 times greater performance than the commercial E-TEK Pt catalyst. All these data indicated that the performance of these catalysts depends on: a) active surface area, b) HOads/ H2Oads ratio, and c) morphology of the catalysts.</dc:description>
+   <dc:description>M.S. - Master of Science</dc:description>
+   <dc:date>2019-07-05T20:56:41Z</dc:date>
+   <dc:date>2019-07-05T20:56:41Z</dc:date>
+   <dc:date>2014</dc:date>
+   <dc:date>2014</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>http://etd.lib.metu.edu.tr/upload/12618095/index.pdf</dc:identifier>
+   <dc:identifier>https://hdl.handle.net/11511/24138</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/12300</identifier><datestamp>2021-05-20T14:02:28Z</datestamp><setSpec>com_11511_108</setSpec><setSpec>com_11511_12</setSpec><setSpec>com_11511_16</setSpec><setSpec>col_11511_89061</setSpec><setSpec>col_11511_158</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Aerodynamic analysis of a full aircraft configuration using a panel method</dc:title>
+   <dc:creator>Kurtuluş, Dilek Funda</dc:creator>
+   <dc:contributor>Alemdaroğlu, Nazif</dc:contributor>
+   <dc:contributor>Özyörük, Yusuf</dc:contributor>
+   <dc:contributor>Department of Aeronautical Engineering</dc:contributor>
+   <dc:date>2019-07-05T18:39:19Z</dc:date>
+   <dc:date>2019-07-05T18:39:19Z</dc:date>
+   <dc:date>2002</dc:date>
+   <dc:date>2002</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/12300</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:format>123 pages</dc:format>
+   <dc:format>application/pdf</dc:format>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><record><header><identifier>oai:https://open.metu.edu.tr:11511/3271</identifier><datestamp>2021-05-20T13:15:41Z</datestamp><setSpec>com_11511_16</setSpec><setSpec>com_11511_101</setSpec><setSpec>com_11511_8</setSpec><setSpec>col_11511_158</setSpec><setSpec>col_11511_89054</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doc="http://www.lyncode.com/xoai" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <dc:title>Designing a square.</dc:title>
+   <dc:creator>Atalay, Kamer</dc:creator>
+   <dc:contributor>Department of Architecture</dc:contributor>
+   <dc:date>2019-07-05T17:14:26Z</dc:date>
+   <dc:date>2019-07-05T17:14:26Z</dc:date>
+   <dc:date>1985</dc:date>
+   <dc:date>1985</dc:date>
+   <dc:type>Master Thesis</dc:type>
+   <dc:identifier>https://hdl.handle.net/11511/3271</dc:identifier>
+   <dc:language>en</dc:language>
+   <dc:publisher>Middle East Technical University</dc:publisher>
+</oai_dc:dc></metadata></record><resumptionToken completeListSize="30963" cursor="0">oai_dc///com_11511_16/100</resumptionToken></ListRecords></OAI-PMH>

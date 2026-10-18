@@ -1,0 +1,56 @@
+# Ring stop names as printed in the TİM route tables (tim.metu.edu.tr ring pages) → the map.metu.edu.tr place that
+# marks the stop (a bus station where the map has one, else the building next to the stop). Only used to place stops
+# on the map for metu_campus_route; the routes themselves come from the collected ring pages.
+# Keys are matched case-, accent- and punctuation-insensitively after "Başlangıç:" / "Bitiş:" are removed.
+
+A-2 Metro Kapısı: A2 Metro Gate Bus Station
+A2 Metro Kapısı: A2 Metro Gate Bus Station
+A2 Metrosu: A2 Metro Gate Bus Station
+A-2: A2 Metro Gate Bus Station
+A1 Metro Kapısı: A1 Gate Bus Station
+A1-Metro Kapısı: A1 Gate Bus Station
+A-1 Kapısı: A1 Gate Bus Station
+A1 Kapısı: A1 Gate Bus Station
+Kolej: Garages Bus Station
+Garajlar: Garages Bus Station
+Kolej-Garajlar: Garages Bus Station
+Garajlar - Kolej: Garages Bus Station
+BÖTE-MYO: Department of Computer Education and Instructional Technology
+Yabancı Diller Meslek Yüksek Okulu: Department of Computer Education and Instructional Technology
+Eğitim Fakültesi: Faculty of Education Bus Station
+Teknokent: Technopolis Bus Station
+ODTÜ Teknokent: Technopolis Bus Station
+Teknokent Uydu Otopark: Technopolis Bus Station
+ODTÜ Spor Merkezi: Sports Center
+ODTÜ KENT: ODTÜKENT Bus Station
+ODTÜ KENT Kavşağı: ODTÜKENT Bus Station
+Batı Yurtlar: West Dormitories Territory Bus Station
+Batı Yurtlar - Havacılık ve Uzay Mühendisliği: West Dormitories Territory Bus Station
+Batı Yurtlar-Havcılık ve Uzay Mühendisliği: West Dormitories Territory Bus Station
+Havacılık Mühendisliği: Aerospace Engineering Bus Station
+Havacılık ve Uzay Mühendisliği: Aerospace Engineering Bus Station
+Gıda Mühendisliği: Food Engineering Bus Station
+Jeoloji Mühendisliği: Geological Engineering Bus Station
+Makina Mühendisliği: Department of Mechanical Engineering Bus Station
+Makine Mühendisliği: Department of Mechanical Engineering Bus Station
+Endüstri Mühendisliği: Department of Industrial Engineering Bus Station
+Yuva: METU Kindergarden Parking Lot
+ODTÜ Yuva: METU Kindergarden Parking Lot
+Kreş(Yuva): METU Kindergarden Parking Lot
+Mimarlık Fakültesi: Faculty of Architecture Bus Station
+Mimarlık: Faculty of Architecture Bus Station
+Yabancı Diller Yüksek Okulu: School of Foreign Languages
+YDYO: School of Foreign Languages
+YDYO Işıklar: School of Foreign Languages
+İİBF: Faculty of Economic and Administrative Sciences Bus Station
+İktisadi ve İdari Bilimler Fakültesi: Faculty of Economic and Administrative Sciences Bus Station
+Rektörlük: Presidency Bus Station
+Ziraat Bankası: Shopping Center (Çarşı)
+Ziraat Bankası (Çarşı): Shopping Center (Çarşı)
+Doğu Yurtlar: East Dormitory Territory Bus Station
+İş Bankası: Post Office Bus Station
+Kültür Kongre Merkezi: Cultural and Convention center Bus Station
+Kültür Kongre Merkezi karşısı- Kavşak: Cultural and Convention center Bus Station
+İnşaat Mühendisliği: Department of Civil Engineering Bus Station
+Kimya Mühendisliği: Department of Chemical Engineering Bus Station
+Stadyum Kavşağı: METU Stadium

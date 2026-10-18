@@ -1,0 +1,254 @@
+# Starter evaluation set: realistic student questions with the tool(s) and source a good answer should use.
+# Run manually against a client (Claude Code / Inspector) and record: correct tool? correct source? freshness relayed?
+# Grow this to 30–50 questions with real questions collected from students.
+
+- q: "Ekle-sil ne zaman bitiyor?"
+  lang: tr
+  expect_tools: [metu_calendar_events]
+  expect_source: oidb.metu.edu.tr
+  expect_answer_contains: ["9 Ekim 2026"]
+
+- q: "When is the add-drop period this fall?"
+  lang: en
+  expect_tools: [metu_calendar_events]
+  expect_source: oidb.metu.edu.tr
+
+- q: "Final sınavları ne zaman başlıyor?"
+  lang: tr
+  expect_tools: [metu_calendar_events]
+  expect_answer_contains: ["4 Ocak 2027"]
+
+- q: "Önümüzdeki iki haftada kaçırmamam gereken bir tarih var mı?"
+  lang: tr
+  expect_tools: [metu_calendar_next]
+
+- q: "7592 af başvurusu nasıl yapılıyor?"
+  lang: tr
+  expect_tools: [metu_find_link, metu_announcements]
+  expect_source: oidb.metu.edu.tr
+
+- q: "Transkriptimi gösterir misin?"
+  lang: tr
+  expect_tools: [metu_find_link]
+  expect_answer_contains: ["oibs.metu.edu.tr"]
+  note: Personal data — must not invent; must say login is required.
+
+- q: "Harç borcum var mı?"
+  lang: tr
+  expect_tools: [metu_find_link]
+  expect_answer_contains: ["OİBS"]
+
+- q: "Bugün yemekhanede ne var?"
+  lang: tr
+  expect_tools: [metu_dining_menu]
+  expect_source: kafeterya.metu.edu.tr
+
+- q: "Is there a vegetarian option at dinner tomorrow?"
+  lang: en
+  expect_tools: [metu_dining_menu]
+
+- q: "Öğle yemeği saat kaçta bitiyor?"
+  lang: tr
+  expect_tools: [metu_dining_menu]
+  expect_answer_contains: ["14:00"]
+
+- q: "Kahverengi pulum var, akşam 7'de MM önüne park edebilir miyim?"
+  lang: tr
+  expect_tools: [metu_parking_check]
+  expect_source: ihm.metu.edu.tr
+
+- q: "Sarı pulla kütüphane otoparkına park edebilir miyim?"
+  lang: tr
+  expect_tools: [metu_parking_check]
+
+- q: "How do I get a vehicle permit as a graduate student?"
+  lang: en
+  expect_tools: [metu_vehicle_permit]
+  expect_answer_contains: ["tasitpulu.metu.edu.tr"]
+
+- q: "Sarı pul kurasına nereden başvurulur?"
+  lang: tr
+  expect_tools: [metu_vehicle_permit, metu_find_link]
+  expect_answer_contains: ["tpkura.metu.edu.tr"]
+
+- q: "KKM nerede?"
+  lang: tr
+  expect_tools: [metu_campus_place]
+
+- q: "Where is the nearest ATM to the library?"
+  lang: en
+  expect_tools: [metu_campus_place]
+
+- q: "Rektörlüğe ring ne zaman gelir?"
+  lang: tr
+  expect_tools: [metu_transport]
+  expect_source: ring.metu.edu.tr
+
+- q: "Sarı ring saat kaçta kalkıyor?"
+  lang: tr
+  expect_tools: [metu_transport]
+  expect_source: tim.metu.edu.tr
+
+- q: "ÖİDB'nin son duyuruları neler?"
+  lang: tr
+  expect_tools: [metu_announcements]
+
+- q: "Any new announcements from the Graduate School of Natural and Applied Sciences?"
+  lang: en
+  expect_tools: [metu_announcements]
+
+- q: "BÖTE bölümünden yeni duyuru var mı?"
+  lang: tr
+  expect_tools: [metu_announcements]
+
+- q: "Bu hafta ODTÜ'de ne değişti?"
+  lang: tr
+  expect_tools: [metu_recent_changes]
+
+- q: "Öğrenci belgesi nasıl alırım?"
+  lang: tr
+  expect_tools: [metu_search, metu_find_link]
+
+- q: "BÖTE lisansüstü ders programı nerede?"
+  lang: tr
+  expect_tools: [metu_find_link]
+  expect_answer_contains: ["ceit.metu.edu.tr"]
+
+- q: "Tezli mi tezsiz mi programdayım?"
+  lang: tr
+  expect_tools: [metu_find_link]
+  expect_answer_contains: ["OİBS"]
+  note: Personal — point to OİBS, then FBE if unclear.
+
+- q: "eduroam'a bağlanamıyorum"
+  lang: tr
+  expect_tools: [metu_find_link]
+  expect_answer_contains: ["faq.cc.metu.edu.tr"]
+
+- q: "Which sections of CEIT 100 are open and who teaches them?"
+  lang: en
+  expect_tools: [metu_find_link]
+  expect_answer_contains: ["oibs2.metu.edu.tr"]
+  note: Sections are not scraped (robots.txt) — must link to oibs2.
+
+- q: "Kütüphane gece açık mı?"
+  lang: tr
+  expect_tools: [metu_find_link]
+  expect_answer_contains: ["lib.metu.edu.tr"]
+
+- q: "Dersten çekilme son günü ne zaman?"
+  lang: tr
+  expect_tools: [metu_calendar_events]
+  expect_answer_contains: ["6 Aralık 2026"]
+
+- q: "Katkı payı ne kadar?"
+  lang: tr
+  expect_tools: [metu_search, metu_find_link]
+  expect_source: oidb.metu.edu.tr
+
+# --- added 2026-10-04: course catalog and campus services ---
+
+- q: "CENG 213'ün önkoşulu ne?"
+  lang: tr
+  expect_tools: [metu_course_info]
+  expect_source: catalog.metu.edu.tr
+  expect_answer_contains: ["CENG140"]
+
+- q: "Which courses need MATH 119 as a prerequisite?"
+  lang: en
+  expect_tools: [metu_course_info]
+  expect_source: catalog.metu.edu.tr
+
+- q: "Is CENG 351 offered this semester and who teaches it?"
+  lang: en
+  expect_tools: [metu_course_info, metu_find_link]
+  expect_answer_contains: ["oibs2.metu.edu.tr"]
+  note: The catalog has no term/section data; must point to the offered-courses page, not guess.
+
+- q: "Mediko'da bugün göz doktoru var mı?"
+  lang: tr
+  expect_tools: [metu_doctors_on_duty]
+  expect_source: srm.metu.edu.tr
+  note: Must relay the page's check time; the list changes daily.
+
+- q: "Psikolojik destek almak istiyorum, nereye başvurmalıyım?"
+  lang: tr
+  expect_tools: [metu_find_link, metu_campus_services]
+  expect_answer_contains: ["PDRM"]
+
+- q: "Kütüphaneden kaç kitap alabilirim, kaç gün?"
+  lang: tr
+  expect_tools: [metu_campus_services]
+  expect_answer_contains: ["15 kitabı 15 gün"]
+
+- q: "Is the library open at 3 am?"
+  lang: en
+  expect_tools: [metu_campus_services]
+  expect_answer_contains: ["24/7"]
+
+- q: "Havuz açık mı?"
+  lang: tr
+  expect_tools: [metu_announcements, metu_campus_services]
+  expect_source: hm.metu.edu.tr
+  note: Pools closed for renovation since June 2026 (as of 2026-10-04).
+
+- q: "Tenis kortları kaçta açılıyor?"
+  lang: tr
+  expect_tools: [metu_campus_services]
+  expect_source: spormd.metu.edu.tr
+
+- q: "Yoga kursuna nasıl kaydolurum?"
+  lang: tr
+  expect_tools: [metu_announcements]
+  expect_source: spormd.metu.edu.tr
+
+- q: "Any software engineering internships posted?"
+  lang: en
+  expect_tools: [metu_announcements]
+  expect_source: kpm.metu.edu.tr
+
+- q: "Bu hafta hangi kulüp etkinlikleri var?"
+  lang: tr
+  expect_tools: [metu_events]
+  expect_source: kim.metu.edu.tr
+
+- q: "Kampüste cüzdanımı çaldırdım, kimi aramalıyım?"
+  lang: tr
+  expect_tools: [metu_find_link, metu_campus_services]
+  expect_answer_contains: ["210 2113"]
+
+- q: "How do I get MATLAB as a METU student?"
+  lang: en
+  expect_tools: [metu_it_help, metu_find_link]
+  expect_source: faq.cc.metu.edu.tr
+
+- q: "Kartıma nasıl para yüklerim?"
+  lang: tr
+  expect_tools: [metu_find_link]
+  expect_source: kafeterya.metu.edu.tr
+
+- q: "Güz kariyer fuarı ne zaman, nerede?"
+  lang: tr
+  expect_tools: [metu_events]
+  expect_answer_contains: ["22 Ekim 2026"]
+
+- q: "eduroam'a iPhone'dan nasıl bağlanırım?"
+  lang: tr
+  expect_tools: [metu_it_help]
+  expect_source: faq.cc.metu.edu.tr
+
+- q: "Bu Hafta bülteninde son haberler neler?"
+  lang: tr
+  expect_tools: [metu_announcements]
+  expect_source: buhafta.metu.edu.tr
+
+- q: "Matematik bölümünün son duyuruları"
+  lang: tr
+  expect_tools: [metu_announcements]
+  expect_source: math.metu.edu.tr
+
+- q: "Spor tesisi ücretleri ne kadar?"
+  lang: tr
+  expect_tools: [metu_campus_services]
+  expect_answer_contains: ["tesis_kullanim_ucretleri"]
+  note: The fee table is an image; the answer must give the current file link, not invent prices.

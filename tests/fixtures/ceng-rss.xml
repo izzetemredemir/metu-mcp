@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://ceng.metu.edu.tr/en">
+  <channel>
+    <title>Department of Computer Engineering</title>
+    <link>https://ceng.metu.edu.tr/en</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>Assoc. Prof. Dr. Emre Uğur</title>
+  <link>https://ceng.metu.edu.tr/en/assoc-prof-dr-emre-ugur</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Assoc. Prof. Dr. Emre Uğur&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;wwwceng&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-09-03T12:33:06+03:00" title="Thursday, September 3, 2026 - 12:33" class="datetime"&gt;Thu, 03/09/2026 - 12:33&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+  &lt;div class="field field--name-field-personel-name field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Personel Name&lt;/div&gt;
+              &lt;div class="field__item"&gt;Assoc. Prof. Dr. Emre&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-personel-surname field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Personel Surname&lt;/div&gt;
+              &lt;div class="field__item"&gt;Uğur&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-tel field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Tel&lt;/div&gt;
+              &lt;div class="field__item"&gt;+90-312-210-5563&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-office field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Office&lt;/div&gt;
+              &lt;div class="field__item"&gt;B107&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-phd field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;PhD&lt;/div&gt;
+              &lt;div class="field__item"&gt;Middle East Technical University, Turkey&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-research-interests field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Research Interests&lt;/div&gt;
+              &lt;div class="field__item"&gt;Robotics&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-web-site field--type-link field--label-above"&gt;
+    &lt;div class="field__label"&gt;Web Site&lt;/div&gt;
+              &lt;div class="field__item"&gt;&lt;a href="https://emreugur.org/"&gt;https://emreugur.org/&lt;/a&gt;&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-staff-sorting field--type-integer field--label-above"&gt;
+    &lt;div class="field__label"&gt;Staff Sorting&lt;/div&gt;
+              &lt;div class="field__item"&gt;39&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-photo field--type-image field--label-above"&gt;
+    &lt;div class="field__label"&gt;Photo&lt;/div&gt;
+              &lt;div class="field__item"&gt;  &lt;img loading="lazy" src="https://ceng.metu.edu.tr/sites/ceng.metu.edu.tr/files/2026-09/emre-boun_0.jpg" width="366" height="366" alt&gt;
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-e-mail-address field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;E-mail Address&lt;/div&gt;
+              &lt;div class="field__item"&gt;emreugur[at]metu.edu.tr&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div class="field field--name-field-personel-type field--type-entity-reference field--label-above"&gt;
+    &lt;div class="field__label"&gt;Personel Type&lt;/div&gt;
+          &lt;div class="field__items"&gt;
+              &lt;div class="field__item"&gt;&lt;a href="https://ceng.metu.edu.tr/en/people-type/faculty-members" hreflang="en"&gt;Faculty Members&lt;/a&gt;&lt;/div&gt;
+              &lt;/div&gt;
+      &lt;/div&gt;
+</description>
+  <pubDate>Thu, 03 Sep 2026 09:33:06 +0000</pubDate>
+    <dc:creator>wwwceng</dc:creator>
+    <guid isPermaLink="false">1364 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>Better Web Security Through Adaptive Web Measurements</title>
+  <link>https://ceng.metu.edu.tr/en/better-web-security-through-adaptive-web-measurements</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Better Web Security Through Adaptive Web Measurements&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-09-02T10:22:59+03:00" title="Wednesday, September 2, 2026 - 10:22" class="datetime"&gt;Wed, 02/09/2026 - 10:22&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-danger fs-6 px-3 py-2"&gt;PhD Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 08.09.2026 — 13:00&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;YIGIT SEVER&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;ASSOC.PROF.DR.PELIN ANGIN ULKUER&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;120 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;The Internet and the World Wide Web is a crucial service that we rely heavily on for our daily lives. Modern web applications carry immense importance through our reliance to it for access to information and communication. This importance goes hand in hand with the security of the Web. The most popular way of Web security research is through large scale web measurements. In these measurement studies, researchers crawl and access a set of the web from a set of vantage points using some configurations to infer the security of the servers and the privacy of the end users through their findings. Since the Web is extensive, web measurements use a set of seed pages, often through top-lists that consist of the most popular webpages according to some authority. Furthermore, the choice of the methods for accessing and crawling the webpages affect the results as well. In this work, we evaluate these methods, propose explainable seed set selections and crawling methods that reflect and respect the structure and the organization of the web. We are aiming to develop tools to investigate the state of the web security better instead of one-size-fits-all measurement techniques.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-09-08 13:00:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Wed, 02 Sep 2026 07:22:59 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1363 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>COMMUNICATION-AWARE ACTIVESLAM FOR DECENTRALIZED SWARM EXPLORATION</title>
+  <link>https://ceng.metu.edu.tr/en/communication-aware-activeslam-decentralized-swarm-exploration</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;COMMUNICATION-AWARE ACTIVESLAM FOR DECENTRALIZED SWARM EXPLORATION&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-09-01T11:55:40+03:00" title="Tuesday, September 1, 2026 - 11:55" class="datetime"&gt;Tue, 01/09/2026 - 11:55&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 08.09.2026 — 10:00&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;IMRE KOSDIK&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;PROF.DR.ERTAN ONUR,ASSOC.PROF.DR.ELIF SURER&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;60 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;To create a map of unknown terrain where GPS is unreliable or unavailable, decentral ized UAV swarms are deployed. This task demands a trade-off between maximizing spatial coverage, maintaining network connectivity, and limiting the localization drift accumulated by the LiDAR sensors on UAVs. Existing work treats connectivity and drift correction as fixed constraints instead of coupled behaviors. The purpose of this thesis is to develop a decentralized Multi-Agent Reinforcement Learning (MARL) model to solve this problem. Each agent learns to cover unexplored regions, maintain network connectivity by dynamic relay allocation, and show drift-aware behaviors together. Agents manage drift by implicitly performing loop closures as localization confidence decreases. The MARL policy is trained with a curriculum learning paradigm, where the scale of the mission area and UAV count increase over stages. It is evaluated using a four way ablation design that isolates the individual contribution of FANET-awareness and SLAM-drift-awareness. This is achieved by toggling each constraint in direct link, single-hop, and multi-hop scenarios. The policy is evaluated on the same three v scenarios with different swarm sizes. Results show that under direct-link conditions, the policy matches the spatial coverage of a drift-and-connectivity-unaware baseline to within 0.1 percentage points (95.6% vs. 95.7%). As the scale of the mission area grows, relay usage and multi-hop path length also grow proportionally. For example, relay ratio rises from 4.6% to 33.0%, and the 2+-Hop Ratio rises from 11.5% to 55.7%. A notable observation is that managing connectivity and drift together does not affect the overall spatial coverage considerably. In the cases requiring multi-hop paths, the policy and the drift-unaware baseline demonstrate approximately the same coverage and relay workloads. Results also show that the number of loop-closures and the mission area scale are inversely proportional. The loop-closure rate drops to zero in multi-hop scenarios, but localization confidence remains bounded. A swarm-size scaling analysis was also performed. This revealed that packet delivery reliability increases proportionally with the number of agents. Spatial coverage rate drops when swarm size does not scale with the required multi-hop paths. In summary, a policy that balances exploration, network connectivity, and localization confidence without explicit coordination can be learned.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-09-08 10:00:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Tue, 01 Sep 2026 08:55:40 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1362 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>INVESTIGATING OPTIMIZATION METHODS FOR SPECTRUM PRESERVATION IN SUBDIVISION SURFACES</title>
+  <link>https://ceng.metu.edu.tr/en/investigating-optimization-methods-spectrum-preservation-subdivision-surfaces</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;INVESTIGATING OPTIMIZATION METHODS FOR SPECTRUM PRESERVATION IN SUBDIVISION SURFACES&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-08-31T15:16:14+03:00" title="Monday, August 31, 2026 - 15:16" class="datetime"&gt;Mon, 31/08/2026 - 15:16&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 04.09.2026 — 14:00&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;FIRAT AGIS&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;PROF.DR.YUSUF SAHILLIOGLU&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;90 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;Subdivision schemes are widely used in digital geometry processing, but they are typically optimized for geometric continuity rather than spectral properties. In this thesis, we investigate the problem of optimizing existing schemes, specifically the Butterfly subdivision, to preserve the spectrum of the cotangent Laplace-Beltrami operator. We implemented and evaluated several optimization strategies, including gradient descent, full optimization, binary optimization, and brute-force methods. We compare the behavior, computational performance, and limitations of each approach. We show that while achieving consistent preservation of the spectrum remains computationally challenging, this comparative study establishes practical baselines for future research in spectral mesh processing, specifically for subdivision and processes that comes after subdivision.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-09-04 14:00:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Mon, 31 Aug 2026 12:16:14 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1361 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>Random Prototype Knowledge Distillation for Cross-Architecture Knowledge Transfer</title>
+  <link>https://ceng.metu.edu.tr/en/random-prototype-knowledge-distillation-cross-architecture-knowledge-transfer</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Random Prototype Knowledge Distillation for Cross-Architecture Knowledge Transfer&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-08-31T10:15:09+03:00" title="Monday, August 31, 2026 - 10:15" class="datetime"&gt;Mon, 31/08/2026 - 10:15&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 02.09.2026 — 14:00&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;HAMZA ETCIBASI&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;ASSOC.PROF.DR.R.GOKBERK CINBIS&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;90 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;A widely held assumption in knowledge distillation is that teacher and student representations must occupy a compatible or explicitly aligned feature space. This thesis proposes RPKD (Random Prototype Knowledge Distillation), which discards this assumption by projecting both networks into a shared set of randomly initialized, frozen prototype vectors, requiring no architecture-specific adapters, no class-specific alignment, and minimal architectural assumptions. Two branches handle the transfer: a logit branch aligning global prototype similarity distributions and a feature branch matching spatially-resolved prototype activation maps. Both operate within the same fixed prototype space, which can be interpreted as a random feature embedding that approximately preserves inter-sample similarity structure, keeping RPKD agnostic to the internal dimensions and inductive biases of either network. In low-category settings, decoupling the prototype vocabulary from the task label space yields richer supervision than the label space alone, an advantage absent from logit-based methods, whose supervisory signal collapses as class count shrinks. This advantage is especially relevant in real-world scenarios where the label space is typically constrained. Extensive experiments demonstrate the effectiveness of RPKD, achieving a maximum gain of +7.98% over OFA, a pioneering cross-architecture baseline, on CIFAR-100, +12.36% on ImageNet-100, and +1.28% on ImageNet-1K.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-09-02 14:00:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Mon, 31 Aug 2026 07:15:09 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1360 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>Transformer-Based Multi-Model Rank Fusion for Cross-Domain Recommendation and Dense Information Retrieval</title>
+  <link>https://ceng.metu.edu.tr/en/transformer-based-multi-model-rank-fusion-cross-domain-recommendation-and-dense-information</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Transformer-Based Multi-Model Rank Fusion for Cross-Domain Recommendation and Dense Information Retrieval&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-08-31T10:15:09+03:00" title="Monday, August 31, 2026 - 10:15" class="datetime"&gt;Mon, 31/08/2026 - 10:15&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 04.09.2026 — 11:30&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;MEHMET ERDENIZ AYDOGDU&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;PROF.DR.I.SENGOR ALTINGOVDE, PROF.DR.PINAR KARAGOZ&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;90 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;Rank fusion is a critical mechanism for synthesizing outputs from multiple retrieval models, yet traditional heuristic and linear supervised methods struggle to generalize across diverse data environments. This thesis introduces EmbMerge, a novel, lightweight transformer-based framework that maps discrete ranking features—such as items, scores, models, and positional ranks—into continuous embedding spaces. To demonstrate its efficacy, EmbMerge is evaluated across two fundamentally distinct domains: implicit feedback Cross-Domain Recommendation (CDR) and dense semantic Information Retrieval (IR). Our empirical evaluation reveals a critical architectural dilemma. In the CDR pipeline, results on datasets like Digix and Amazon prove the network relies heavily on explicit Item Embeddings to map latent topological relationships. Furthermore, because the evaluation relies on a strict leave-one-out methodology, pointwise Binary Cross-Entropy (BCE) loss is mathematically indispensable to stabilize gradients under single-positive constraints. Conversely, for the dense IR domain, we propose a residual prediction architecture trained via an InfoNCE contrastive loss, which refines semantic priors by predicting localized deltas. Ablation studies on the zero-shot BEIR benchmark demonstrate that while Item Embeddings maximize in-domain retrieval, they severely impede domain transfer by memorizing the training corpus. Consequently, achieving robust zero-shot generalization necessitates omitting explicit item representations, forcing the network to rely purely on universal ranking heuristics to prevent dataset memorization. Ultimately, EmbMerge successfully outperforms traditional rank fusion baselines in both domains. However, this research establishes that true domain-independent fusion is not a rigid, universal algorithm; rather, it requires the dynamic calibration of network inputs and objective functions based on the topological mapping requirements and label distributions of the underlying base models.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-09-04 11:30:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Mon, 31 Aug 2026 07:15:09 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1359 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>Cubic Bezier Splines on Polygon Meshes</title>
+  <link>https://ceng.metu.edu.tr/en/cubic-bezier-splines-polygon-meshes</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Cubic Bezier Splines on Polygon Meshes&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-08-26T10:38:08+03:00" title="Wednesday, August 26, 2026 - 10:38" class="datetime"&gt;Wed, 26/08/2026 - 10:38&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 04.09.2026 — 15:00&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;SELAY TEKGUL&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;PROF.DR. YUSUF SAHILLIOGLU&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;90 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;This thesis develops a framework for constructing cubic Bézier splines on polygon meshes. Our method replaces the affine interpolation steps of de Casteljau's construction with interpolation along continuous Dijkstra-like geodesic paths. Recursive evaluation at a selected finite depth produces a face-conforming piecewise-linear parametric curve trace for later geometry processing operations. While the interpolatory control points at two ends are provided by the user or by an algorithm, we use extrapolation to construct the other two interior control points of each cubic Bezier curve segment. We have a special treatment to handle the ends of an open spline using solely the ending curves themselves, while closed splines use cyclic neighbors. Furthermore, two interior control points at a shared user defined control point are aligned in a local polyhedral representation in order to impose a C1 continuity in a discrete sense. The face-conforming piecewise-linear parametric curve trace of the generated cubic Bezier spline supports three geometry processing applications. Firstly, in automatic surface filling; instead of a user, the control points can be distributed to the mesh automatically and their traversal order can be determined. The control points, then, can be connected with geodesics as well as the cubic Bezier splines. Secondly, interactive cubic Bézier spline untangling keeps the user defined control points fixed and uses the Separation–Direction-Coherence objective function energy minimization with coordinate descent and multiple trial directions. The user controls when each untangling run starts, pauses, continues, and stops. Thirdly, curve-conforming mesh adaptation inserts the face-conforming piecewise-linear parametric curve trace points of the closed cubic Bezier splines as new mesh vertices and adds required mesh edges for triangulation. Also, performs local interior triangles' selection of the closed Bezier splines, namely surface painting. Our framework supports any polygon input mesh, e.g., triangle and quadrilateral meshes. We fan-triangulate higher-degree faces, e.g., quads, as all subsequent operations use a triangular mesh.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-09-04 15:00:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Wed, 26 Aug 2026 07:38:08 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1358 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>GRAPH-BASED CHAIN CONSTRUCTION APPROACH TO LANDMARK-GUIDED REINFORCEMENT LEARNING</title>
+  <link>https://ceng.metu.edu.tr/en/graph-based-chain-construction-approach-landmark-guided-reinforcement-learning</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;GRAPH-BASED CHAIN CONSTRUCTION APPROACH TO LANDMARK-GUIDED REINFORCEMENT LEARNING&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-08-17T13:50:45+03:00" title="Monday, August 17, 2026 - 13:50" class="datetime"&gt;Mon, 17/08/2026 - 13:50&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 13.08.2026 — 15:00&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;ANIL ERDEM DERINOZ&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;PROF.DR.FARUK POLAT, ASST.PROF.DR.HUSEYIN AYDIN&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;90 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;Reinforcement Learning (RL) provides a powerful framework for autonomous deci-sion making; however, its real-world applicability is often bottlenecked by the as-sumption of perfect environmental observability. While Partially Observable Markov Decision Processes (POMDPs) provide a more realistic formulation for these prob-lems, they lead perceptual aliasing which makes long-horizon planning highly unsta-ble for the agent. Landmark-based task decomposition offers a promising solution by utilizing critical environmental waypoints to break complex, global navigation prob-lems into localized, manageable sub-tasks. Despite this, a fundamental challenge per-sists: once landmarks are identified, determining the optimal sequence to visit them remains mathematically and computationally difficult. Current baseline approaches typically rely on passive, stochastic random walks to build transitional associations. This passive methodology aitificially restricts topological discovery, struggles with stochastic sparsity, and suffers from reward agnosticism, fundamentally failing to capture optimal trajectories. To overcome these limitations, this thesis introduces Graph-Based Chain Construe- tion (GBCC), a novel hierarchical decomposition framework that shifts the learn-ing paradigm from passive association to active, concurrent exploration. Rather than relying on a single agent's random walk, GBCC dynamically spawns a swarm of goal-conditioned sub-agents at each discovered landmark, effectively transforming the global exploration burden into localized sub-tasks. These agents systematically construct a directed, value-embedded reachability graph of the environment. Com-prehensive empirical evaluations in complex grid-world domains demonstrate that GBCC significantly outperforms existing benchmark methods. The proposed frame-work achieves complete and robust topological coverage in dense connectivity scenar-ios, successfully identifying optimal, high-yield paths while managing computational trade-offs, thereby establishing a highly scalable approach.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-08-13 15:00:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Mon, 17 Aug 2026 10:50:45 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1356 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>CONWISE-FT: ENHANCING FEW-SHOT LEARNING THROUGH CONTRASTIVE PROJECTION TUNING AND POST-TRAINING WEIGHT ENSEMBLING</title>
+  <link>https://ceng.metu.edu.tr/en/conwise-ft-enhancing-few-shot-learning-through-contrastive-projection-tuning-and-post-training</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;CONWISE-FT: ENHANCING FEW-SHOT LEARNING THROUGH CONTRASTIVE PROJECTION TUNING AND POST-TRAINING WEIGHT ENSEMBLING&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-08-17T13:50:45+03:00" title="Monday, August 17, 2026 - 13:50" class="datetime"&gt;Mon, 17/08/2026 - 13:50&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 27.08.2026 — 15:00&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;ALPER BAHCEKAPILI&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;ASSOC.PROF.DR.EMRE AKBAS&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;90 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;Foundation vision–language models such as CLIP achieve strong zero-shot performance, but adapting them to specialised few-shot tasks still remains difficult. Two failure modes recur: models tend to overfit to the few samples given druing training if the process is not carefully designed, and also model selection becomes unreliable because the few-shot validation set is too small to serve as a faithful proxy for test performance. Existing methods address these problems by different techniques such as parameter efficient fine-tuning which preserves most of the model’s weights frozen, prompt tuning which aims to learn only text input tokens that best translate to the FSL problem, or with prototypical networks re-structuring the objective as learning to match with a known class prototypes. Proposed architecture ConWise-FT fine-tunes only the final visual projection layer of a frozen image encoder with three extra ingredients: a Supervised Contrastive (SupCon) auxiliary loss that explicitly shapes a well-clustered embedding geometry alongside the cross-entropy objective; tail Stochastic Weight Averaging over late-epoch projecv tors to reduce variance; and a WiSE-FT-style post-training blend between the learned and the initial projector that acts as a regulariser. We further use the Regret metric to quantify the cost of unreliable model selection. On the eleven-dataset BiomedCoOp medical benchmark, ConWise-FT surpasses established prompt-learning baselines and is competitive with the state of the art; on the eleven-dataset natural-image benchmark it ranks second overall while requiring orders of magnitude less compute. The post-training block consistently lowers Regret and partly recovers the novel-class accuracy lost during base-to-novel adaptation on the medical benchmark, though novel-class generalisation remains a limitation of the single global blend.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-08-27 15:00:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Mon, 17 Aug 2026 10:50:45 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1355 at https://ceng.metu.edu.tr</guid>
+    </item>
+<item>
+  <title>Generative Super-Resolution of 3D Gaussian Splat Sets</title>
+  <link>https://ceng.metu.edu.tr/en/generative-super-resolution-3d-gaussian-splat-sets</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Generative Super-Resolution of 3D Gaussian Splat Sets&lt;/span&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;Anonymous&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;&lt;time datetime="2026-08-17T13:50:45+03:00" title="Monday, August 17, 2026 - 13:50" class="datetime"&gt;Mon, 17/08/2026 - 13:50&lt;/time&gt;
+&lt;/span&gt;
+
+
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;div class="card border-0 shadow-sm mb-4"&gt;
+&lt;div class="card-header bg-white border-bottom"&gt;
+&lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;&lt;span class="badge bg-warning text-dark fs-6 px-3 py-2"&gt;MSc Thesis&lt;/span&gt;&lt;span class="text-muted"&gt;&lt;strong&gt;📅&lt;/strong&gt; 03.09.2026 — 13:30&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row g-3 mb-4"&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;👤 Speaker:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;BATUHAN BAL&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;🎓 Supervisor(s):&lt;/div&gt;
+&lt;div class="fw-bold"&gt;ASSOC.PROF.DR.R.GOKBERK CINBIS&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;📍 Location:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;A105&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6"&gt;
+&lt;div class="p-3 bg-light rounded-3"&gt;
+&lt;div class="text-muted small mb-1"&gt;⏲ Duration:&lt;/div&gt;
+&lt;div class="fw-bold"&gt;90 min.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-4"&gt;
+&lt;h5 class="border-bottom pb-2 mb-3"&gt;&lt;strong&gt;📝 Abstract:&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="ps-3" style="border-left:4px solid #0d6efd;"&gt;
+&lt;p class="mb-0" style="line-height:1.8;"&gt;3D Gaussian Splatting (3DGS) enables real-time novel view synthesis, but Gaussian representations reconstructed from low-resolution observations are typically sparse and lack fine geometric and appearance details, limiting the quality of high-resolution novel-view rendering. Existing 3DGS super-resolution methods either refine each scene through test-time optimization with external 2D priors, or learn feed-forward mappings from low-resolution images to high-resolution splats. Neither line of work learns a reusable cross-scene mapping that operates directly on pre-fit low-resolution Gaussian splat sets. This thesis proposes a generative two-stage framework for super-resolving pre-fit 3D Gaussian splat sets. In Stage I, a Point Transformer-based VQ-VAE learns a discrete latent codebook from high-quality Gaussian splats. In Stage II, a transformer predicts high-resolution latent codes from degraded low-resolution splat sets. Instead of directly regressing Gaussian attributes, the proposed approach formulates restoration as discrete latent code prediction, enabling feed-forward reconstruction without per-scene optimization or image-space priors. The proposed framework demonstrates the feasibility of generative super-resolution directly in the Gaussian parameter space, providing an alternative to optimization-based and image-driven approaches.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+      
+  &lt;div class="field field--name-field-time-location field--type-string field--label-above"&gt;
+    &lt;div class="field__label"&gt;Time - Location&lt;/div&gt;
+              &lt;div class="field__item"&gt;2026-09-03 13:30:00&lt;/div&gt;
+          &lt;/div&gt;
+</description>
+  <pubDate>Mon, 17 Aug 2026 10:50:45 +0000</pubDate>
+    <dc:creator>Anonymous</dc:creator>
+    <guid isPermaLink="false">1354 at https://ceng.metu.edu.tr</guid>
+    </item>
+
+  </channel>
+</rss>

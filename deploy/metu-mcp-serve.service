@@ -1,0 +1,22 @@
+[Unit]
+Description=metu-mcp MCP HTTP server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=metu
+Group=metu
+WorkingDirectory=/opt/metu-mcp
+EnvironmentFile=/etc/metu-mcp.env
+ExecStart=/usr/bin/node dist/cli.js serve --port ${PORT} --host 127.0.0.1
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/metu-mcp
+
+[Install]
+WantedBy=multi-user.target

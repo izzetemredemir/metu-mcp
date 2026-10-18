@@ -1,0 +1,118 @@
+# Structured version of METU's official parking rules, used by `metu_parking_check`.
+#
+# Source (Turkish, authoritative): https://ihm.metu.edu.tr/tr/tasit-pulu-turune-gore-park-yerleri
+# The `page:ihm-parking-by-permit` collector watches that page. If it records a change after `verified_on`,
+# answers warn that the official rules may have changed since this file was last checked by a human.
+#
+# Zones are matched against map.metu.edu.tr parking-lot names (English, folded to ASCII lowercase).
+# Order matters: the first matching zone wins.
+
+source_url: https://ihm.metu.edu.tr/tr/tasit-pulu-turune-gore-park-yerleri
+source_updated: 2026-07-11
+verified_on: 2026-09-30
+
+zones:
+  - id: restricted-department
+    name: { en: Restricted department lots, tr: Kısıtlı bölüm otoparkları }
+    # Central Engineering (MM), Industrial Eng., Chemistry, Physics, Mathematics, Human Sciences buildings.
+    patterns: ['central engineering', 'department of industrial engineering', 'department of chemistry parking', 'department of physics', 'department of mathematics', 'human sciences']
+  - id: department
+    name: { en: Department / faculty lots, tr: Bölüm / fakülte otoparkları }
+    patterns: ['^department of', '^faculty of', 'school of foreign languages', 'informatics institute', 'engineering sciences', 'computer center', 'central laboratory']
+  - id: library
+    name: { en: Library lot, tr: Kütüphane otoparkı }
+    patterns: ['^library parking']
+  - id: cafeteria
+    name: { en: Cafeteria lot, tr: Kafeterya otoparkı }
+    patterns: ['^cafeteria parking']
+  - id: kkm
+    name: { en: Culture and Convention Center (KKM) lot, tr: KKM otoparkı }
+    patterns: ['cultural and convention center']
+  - id: shopping
+    name: { en: Shopping area (Çarşı) lot, tr: Çarşı otoparkı }
+    patterns: ['shopping center', 'bank territory']
+  - id: big-gym
+    name: { en: Main gymnasium lot, tr: Büyük spor salonu otoparkı }
+    patterns: ['^gymnasium parking']
+  - id: tennis
+    name: { en: Tennis courts lot, tr: Tenis kortları otoparkı }
+    patterns: ['tennis courts']
+  - id: satellite-a2
+    name: { en: A-2 metro gate satellite lot, tr: A-2 metro kapısı uydu otoparkı }
+    patterns: ['a2 gate']
+  - id: odtukent-sports
+    name: { en: ODTÜKENT sports centre lot, tr: ODTÜKENT spor merkezi otoparkı }
+    patterns: ['^odtu kent parking']
+  - id: dormitory
+    name: { en: Dormitory area lots, tr: Yurtlar bölgesi otoparkları }
+    patterns: ['dormitory']
+  - id: pool
+    name: { en: Swimming pool / sports facilities lot, tr: Havuz / spor tesisleri otoparkı }
+    patterns: ['swimming pool', 'baraka gymnasium']
+
+# Permit types a student may hold, plus staff and "none" for completeness.
+permits:
+  yellow:
+    name: { en: Student yellow permit (sarı pul), tr: Öğrenci sarı taşıt pulu }
+    allow: [department, library, cafeteria, kkm, shopping, big-gym, tennis, satellite-a2]
+    deny: [restricted-department]
+    notes:
+      en: "Only your own department's lot among department lots. Yellow permits are not valid at the Central Engineering, Industrial Eng., Chemistry, Physics, Mathematics and Human Sciences lots."
+      tr: "Bölüm otoparklarından yalnızca kendi bölümüne ayrılanı kullanabilirsin. Merkez Mühendislik, Endüstri Müh., Kimya, Fizik, Matematik ve Beşeri Bilimler otoparkları sarı pula kapalıdır."
+    rule_text:
+      tr: "Öğrenci sarı taşıt pulu bulunan araç sürücüleri; Merkez Mühendislik Binası, Endüstri Mühendisliği Bölümü, Kimya Bölümü, Fizik Bölümü, Matematik Bölümü ve Beşeri Bilimler Binası park yerlerini kullanamazlar. Bunun yerine, kendilerine ayrılan bölüm park yerlerini, kütüphane, kafeterya, KKM otoparkı, çarşı bölgesi, büyük spor salonu, tenis kortları ve uydu park yerlerini kullanabilirler."
+      en: "Drivers with a student yellow permit may not use the Central Engineering Building, Industrial Engineering, Chemistry, Physics, Mathematics and Human Sciences Building lots. Instead they may use the department lots assigned to them, the library, cafeteria, KKM, shopping area, main gymnasium, tennis courts and satellite lots."
+  brown:
+    name: { en: Student brown permit (kahverengi pul), tr: Öğrenci kahverengi taşıt pulu }
+    allow: [kkm, odtukent-sports, satellite-a2, dormitory]
+    off_hours_allow: [department, restricted-department]
+    off_hours: { weekday_from: "18:00", weekday_to: "07:00", weekends: true, semester_breaks: true }
+    notes:
+      en: "Dormitory lots only where they are designated for brown permits. Department lots are allowed only 18:00–07:00 on weekdays, at weekends and during semester breaks."
+      tr: "Yurtlar bölgesinde yalnızca kahverengi pula ayrılan yerler. Bölüm otoparkları yalnızca hafta içi 18:00–07:00, hafta sonları ve sömestr tatillerinde kullanılabilir."
+    rule_text:
+      tr: "Öğrenci kahverengi taşıt pulu bulunan araç sürücüleri; KKM otoparkı, ODTÜKENT spor merkezi yanındaki park yeri, Yalıncak Yolu uydu park yeri, A-2 metro kapısı park yeri ve yurtlar bölgesinde kendilerine ayrılan park yerlerini kullanabilirler. Bu sürücüler mesai saatleri dışında (18:00-07:00 saatleri arasında), hafta sonları ve sömestr tatillerinde bölüm park yerlerini kullanabilirler."
+      en: "Drivers with a student brown permit may use the KKM lot, the lot next to the ODTÜKENT sports centre, the Yalıncak Road satellite lot, the A-2 metro gate lot and the lots assigned to them in the dormitory area. Outside working hours (18:00-07:00), at weekends and during semester breaks they may use department lots."
+  graduate:
+    name: { en: Alumni permit (mezun pulu), tr: Mezun taşıt pulu }
+    allow: [satellite-a2, kkm]
+    notes:
+      en: "Satellite lots and the KKM lot only."
+      tr: "Yalnızca uydu park alanları ve KKM otoparkı."
+    rule_text:
+      tr: "Mezun taşıt pulu bulunan araç sürücüleri; uydu park alanları ve KKM park yerini kullanabilirler."
+      en: "Drivers with an alumni permit may use satellite lots and the KKM lot."
+  staff:
+    name: { en: Staff permit (personel pulu), tr: Personel taşıt pulu }
+    allow_all: true
+    notes:
+      en: "Staff permits (academic and administrative) may use all campus lots."
+      tr: "Personel pulu (akademik, idari) tüm yerleşke otoparklarını kullanabilir."
+    rule_text:
+      tr: "Personel taşıt pulu (akademik, akademik süreli, idari, idari süreli) bulunan araç sürücüleri; yerleşkedeki tüm park yerlerini kullanabilirler."
+      en: "Drivers with a staff permit (academic, fixed-term academic, administrative, fixed-term administrative) may use all parking areas on campus."
+  none:
+    name: { en: No permit, tr: Pulsuz }
+    allow: []
+    notes:
+      en: "Campus parking requires a permit that matches the lot. Students can apply for a permit each academic year; graduates without a permit may enter once a month free, otherwise by paying the daily parking fee."
+      tr: "Yerleşkede park etmek için otoparka uygun bir taşıt pulu gerekir. Öğrenciler her eğitim-öğretim yılı başında pul başvurusu yapabilir; pulu olmayan mezunlar ayda bir ücretsiz, sonrasında günlük otopark ücretiyle girebilir."
+    rule_text:
+      tr: "Sürücüler, araçlarını park ederken, sahip oldukları taşıt pulu türüne uygun park yerini kullanmak zorundadır."
+      en: "Drivers must park in a lot that matches the type of vehicle permit they hold."
+
+general_rules:
+  en:
+    - Park only in a lot that matches your permit type.
+    - Disabled parking spaces are for drivers with disabilities only.
+    - Bicycles and motorcycles may not use car spaces.
+    - Park within the painted lines; lots may be closed by staff when necessary.
+    - EV charging spaces are only for charging.
+    - Violations are handled with a points system (warning note and e-mail, then sanctions for repeat violations).
+  tr:
+    - Sahip olduğun taşıt pulu türüne uygun park yerini kullan.
+    - Engelli park yerleri yalnızca engelli sürücüler içindir.
+    - Bisiklet ve motosikletler araç park alanlarını kullanamaz.
+    - Çizgilere uygun park et; park yerleri görevlilerce kapatılabilir.
+    - Elektrikli araç şarj istasyonlarına amacı dışında park edilemez.
+    - İhlaller puan sistemiyle takip edilir (uyarı notu ve e-posta, tekrarında yaptırım).

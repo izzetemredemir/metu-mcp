@@ -1,0 +1,4041 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tüm Eğitimler - METU Learn</title>
+    
+        <link rel="icon" type="image/x-icon" href="/media/site/favicon/favicon.ico">
+    
+    
+
+
+    <link rel="preload" href="/static/css/tailwind.css" as="style">
+    <link rel="stylesheet" href="/static/css/tailwind.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .noto-serif { font-family: 'Noto Serif', serif; }
+        .inter { font-family: 'Roboto', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        [x-cloak] { display: none !important; }
+        
+        /* Safari Compatibility Fixes */
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .backdrop-blur-md { -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+        .backdrop-blur-sm { -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    </style>
+    
+    
+<style>
+  /* ── Page Layout ── */
+  .catalog-page {
+    background: #f4f4f4;
+    min-height: 100vh;
+  }
+
+  /* ── Hero Search ── */
+  .catalog-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    padding: 2.5rem 1.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .catalog-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 48px,
+      rgba(255,255,255,0.03) 48px,
+      rgba(255,255,255,0.03) 49px
+    ), repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 48px,
+      rgba(255,255,255,0.03) 48px,
+      rgba(255,255,255,0.03) 49px
+    );
+    pointer-events: none;
+  }
+  .catalog-hero-inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .catalog-hero h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .catalog-hero p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  /* Arama kutusu bu sayfanın birincil giriş noktası — hero metniyle
+     sınırlı olmadan, tüm kırılım noktalarında tam genişlikte görünür. */
+  .hero-search-wrap {
+    position: relative;
+    max-width: 100%;
+    width: min(100%, 960px);
+    margin: 0.5rem auto 0;
+  }
+  .hero-search-input {
+    width: 100%;
+    padding: 1.125rem 4.5rem 1.125rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  .hero-search-btn {
+    position: absolute;
+    right: 0.375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #E31837;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.2s;
+  }
+  .hero-search-btn:hover { background: #8a0010; }
+  .hero-search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+  }
+
+  /* ── Two-col Layout ── */
+  .catalog-body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  /* ── Sidebar ── */
+  .catalog-sidebar {
+    flex: 0 0 260px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    overflow-y: auto;
+    max-height: calc(100vh - 110px);
+    position: sticky;
+    top: 90px;
+  }
+
+  /* Kaynak (source) dropdown — sekmeler yerine; bağlı Moodle sayısı arttıkça
+     yatay sekmelerin taşması sorunu olmadan büyür. */
+  #source-select-wrap {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .source-select-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.35rem;
+  }
+  .source-select {
+    width: 100%;
+    font-size: 0.825rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.45rem 0.6rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    outline: none;
+    color: #374151;
+    background: #fff;
+  }
+  .source-select:focus {
+    border-color: #E31837;
+  }
+
+  /* Sidebar sections */
+  .sidebar-section {
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .sidebar-section:last-child {
+    border-bottom: none;
+  }
+  .sidebar-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .sidebar-section-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+    font-family: 'Inter', sans-serif;
+  }
+  .sidebar-section-chevron {
+    color: #6b7280;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .sidebar-section.open .sidebar-section-chevron {
+    transform: rotate(180deg);
+  }
+  .sidebar-section-body {
+    display: none;
+    padding: 0 1rem 0.75rem;
+  }
+  .sidebar-section.open .sidebar-section-body {
+    display: block;
+  }
+
+  /* Category inline search */
+  .sidebar-inline-search {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .sidebar-inline-search:focus {
+    border-color: #E31837;
+  }
+
+  /* Checkbox items */
+  .filter-checkbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  .filter-checkbox-item label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.825rem;
+    color: #374151;
+    font-family: 'Inter', sans-serif;
+    flex: 1;
+  }
+  .filter-checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #E31837;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .filter-count {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    white-space: nowrap;
+  }
+  .filter-checkbox-item.is-zero {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  .filter-checkbox-item.is-zero label,
+  .filter-checkbox-item.is-zero input[type="checkbox"] {
+    cursor: not-allowed;
+  }
+  .show-more-btn {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #E31837;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+  .show-more-btn:hover { text-decoration: underline; }
+
+  /* ── Results Area ── */
+  .catalog-results {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Result bar */
+  .result-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .result-count {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+  }
+  .result-count strong {
+    color: #111827;
+  }
+  .sort-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .sort-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+  }
+  .sort-select {
+    font-size: 0.8rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    outline: none;
+    color: #374151;
+  }
+
+  /* Pagination — sonuç listesinden belirgin şekilde ayrılsın diye üstte
+     bir ayraç çizgisi + bolca boşluk var; sayfa sonuna kadar inmeden
+     "liste bitti mi?" sorusunun cevabı burada net olsun istendi. */
+  .pagination-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+  .page-link, .page-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #1f2937;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .page-link:hover, .page-number:hover {
+    background: #E31837;
+    border-color: #E31837;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(227, 24, 55, 0.25);
+  }
+  .page-link.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+    cursor: default;
+  }
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+  .page-number.active {
+    background: #E31837;
+    border-color: #E31837;
+    color: #fff;
+  }
+  .page-ellipsis {
+    color: #9ca3af;
+    font-size: 0.825rem;
+    padding: 0 0.25rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Active filters chips */
+  .active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.3rem 0.75rem;
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    border-radius: 9999px;
+    font-size: 0.775rem;
+    color: #E31837;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+  .filter-chip-remove {
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: #fca5a5;
+    color: #7f1d1d;
+    font-size: 0.65rem;
+    line-height: 1;
+    border: none;
+    font-family: 'Inter', sans-serif;
+  }
+  .filter-chip-remove:hover { background: #f87171; }
+
+  /* ── Horizontal Course Cards ── */
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .course-card-h {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+    position: relative;
+  }
+  .course-card-h:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+  }
+  .course-card-h-body {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+  .course-card-h-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .course-source-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background: #f3f4f6;
+    color: #374151;
+    font-family: 'Inter', sans-serif;
+  }
+  .course-source-badge.moodle { background: #eff6ff; color: #1d4ed8; }
+  .course-source-badge.sem { background: #f0fdf4; color: #15803d; }
+  .course-card-h-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .course-card-h-title:hover { color: #E31837; }
+  .course-card-h-desc {
+    font-size: 0.825rem;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+  }
+  .course-card-h-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+    flex-wrap: wrap;
+  }
+  .course-meta-item {
+    font-size: 0.775rem;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+  }
+  .course-meta-sep {
+    width: 1px;
+    height: 12px;
+    background: #d1d5db;
+    flex-shrink: 0;
+  }
+  .course-card-h-image {
+    flex-shrink: 0;
+    width: 180px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+    background: #f3f4f6;
+  }
+  .course-card-h-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .course-card-h:hover .course-card-h-image img { transform: scale(1.05); }
+  .course-card-h-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d1d5db;
+  }
+  .course-card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
+  /* ── Empty State ── */
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .empty-state svg {
+    width: 56px;
+    height: 56px;
+    color: #d1d5db;
+    margin: 0 auto 1rem;
+  }
+  .empty-state h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  .empty-state p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+  }
+  .reset-btn {
+    margin-top: 1.5rem;
+    padding: 0.625rem 1.5rem;
+    background: #E31837;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.2s;
+  }
+  .reset-btn:hover { background: #8a0010; }
+
+  /* ── Mobile: hide sidebar, show top filters ── */
+  @media (max-width: 900px) {
+    .catalog-body { flex-direction: column; }
+    .catalog-sidebar { position: static; flex: none; width: 100%; }
+    .course-card-h-image { width: 120px; }
+  }
+  @media (max-width: 600px) {
+    .course-card-h-image { display: none; }
+    .catalog-hero h1 { font-size: 1.5rem; }
+    .page-link-label { display: none; }
+    .page-link { padding: 0 0.625rem; }
+  }
+</style>
+
+</head>
+<body class="bg-surface inter text-on-surface overflow-x-hidden" x-data="{ drawerOpen: false }">
+
+    <!-- Üst Menü -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1440px] mx-auto">
+            <div class="flex items-center gap-8">
+                <a href="/" class="text-xl font-bold noto-serif text-primary tracking-tight flex items-center gap-2 shrink-0 whitespace-nowrap">
+                    
+                        <img src="/media/site/logo/Logo_of_METU.svg.png" alt="METULearn" class="h-8 w-auto">
+                    
+                </a>
+                <nav class="hidden md:flex gap-6 items-center">
+                    <a class="inter text-sm uppercase tracking-widest text-primary font-bold border-b-2 border-primary pb-1 transition-all font-semibold" href="/egitimler/">Eğitimler</a>
+                    
+                    <a class="inter text-sm uppercase tracking-widest text-zinc-500 hover:text-primary transition-all font-semibold" href="/sayfa/hakkmzda/">Hakkımızda</a>
+                    
+                    <a class="inter text-sm uppercase tracking-widest text-zinc-500 hover:text-primary transition-all font-semibold" href="/egitmen-ol/">Eğitmen Ol</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <form action="/egitimler/" method="get" class="hidden lg:flex items-center bg-surface-container-high px-4 py-2 rounded-lg">
+                    <button type="submit" class="bg-transparent border-none p-0 mr-2 cursor-pointer">
+                        <i data-lucide="search" class="w-4 h-4 text-zinc-500"></i>
+                    </button>
+                    <input name="q" class="bg-transparent border-none focus:ring-0 text-sm w-48 inter" placeholder="Eğitim ara..." type="text" value=""/>
+                </form>
+                <!-- Dil Seçici -->
+                <form action="/i18n/setlang/" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="vxETSYQWlYjndsdFXQkHT1VcmhnyJdOb97uw2Rc5RyI8nVdrd2nT8lBFbeIA0jRo">
+                    <input name="next" type="hidden" value="">
+                    
+                    
+                    
+                    <select name="language" onchange="this.form.submit()" class="text-xs font-bold tracking-widest text-primary border border-primary/20 px-3 py-1 rounded bg-transparent cursor-pointer focus:outline-none">
+                        
+                            <option value="en">EN</option>
+                        
+                            <option value="tr" selected>TR</option>
+                        
+                    </select>
+                </form>
+                
+            </div>
+        </div>
+        <!-- Arama (küçük ekran): masaüstü (≥lg) satırındaki arama kutusu
+             1024px altında gizlendiği için, sadece <lg'de görünen, her zaman
+             açık/kalıcı ikinci bir tam genişlik arama satırı. Masaüstü
+             görünümü bundan etkilenmez. -->
+        <div class="lg:hidden w-full px-6 pb-6 max-w-[1440px] mx-auto">
+            <form action="/egitimler/" method="get" class="flex items-center bg-surface-container-high px-4 py-2 rounded-lg">
+                <button type="submit" class="bg-transparent border-none p-0 mr-2 cursor-pointer shrink-0">
+                    <i data-lucide="search" class="w-4 h-4 text-zinc-500"></i>
+                </button>
+                <input name="q" class="flex-1 bg-transparent border-none outline-none focus:ring-0 focus:outline-none text-sm inter min-w-0" placeholder="Eğitim ara..." type="text" autocomplete="off" value=""/>
+            </form>
+        </div>
+    </header>
+
+    <main class="pt-36 lg:pt-20 flex-grow">
+        
+<div class="catalog-page">
+
+  <!-- ── Hero Search Banner ── -->
+  <div class="catalog-hero">
+    <div class="catalog-hero-inner">
+      <h1>Tüm Eğitimleri Keşfet</h1>
+      <p>576 eğitim arasından ihtiyacınıza uygun olanı bulun</p>
+    </div>
+    <!-- Sitenin birincil arama giriş noktası: başlığın hemen altında, tüm
+         kırılım noktalarında tam genişlikte ve her zaman görünür. Filtre
+         formunun (#filter-form) güncel değerleri hx-include ile birlikte
+         gönderilir, arama diğer aktif filtreleri sıfırlamaz. -->
+    <form method="get" id="hero-search-form" class="hero-search-wrap"
+          hx-get="/egitimler/" hx-target="#course-list-wrap" hx-swap="outerHTML"
+          hx-push-url="true" hx-include="#filter-form">
+      <svg class="hero-search-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1117 9.5"/></svg>
+      <input
+        type="text"
+        name="q"
+        id="hero-search-input"
+        value=""
+        placeholder="Eğitim ara..."
+        class="hero-search-input"
+        autocomplete="off"
+      >
+      <button type="submit" class="hero-search-btn">Ara</button>
+    </form>
+  </div>
+
+  <!-- ── Body: Sidebar + Results ── -->
+  <div class="catalog-body">
+
+    <!-- ── LEFT SIDEBAR ── -->
+    <form id="filter-form" class="catalog-sidebar" method="get"
+          hx-get="/egitimler/" hx-target="#course-list-wrap" hx-swap="outerHTML"
+          hx-push-url="true" hx-trigger="change, submit" hx-include="#hero-search-form">
+
+      <!-- Kaynak (Audience / Source) -->
+      
+<div id="source-select-wrap">
+  <label class="source-select-label" for="source-select">Kaynak</label>
+  <select class="source-select" id="source-select" name="source">
+    <option value="" selected>Tümü (576)</option>
+    
+    
+    
+    
+    
+    <option value="Bilgeİş"
+      
+      
+    >Bilgeİş (219)</option>
+    
+    
+    
+    
+    
+    <option value="METU Learn"
+      
+      
+    >METU Learn (70)</option>
+    
+    
+    
+    
+    
+    <option value="METU OCW"
+      
+      
+    >METU OCW (217)</option>
+    
+    
+    
+    
+    
+    <option value="ODTÜ-SEM"
+      
+      
+    >ODTÜ-SEM (70)</option>
+    
+    
+    
+  </select>
+</div>
+
+
+      <!-- Disiplin Section (accordion) — kategori filtresinin üstünde -->
+      
+      <div class="sidebar-section open" id="discipline-section">
+        <div class="sidebar-section-header" onclick="toggleSection('discipline-section')">
+          <span class="sidebar-section-title">Disiplin</span>
+          <svg class="sidebar-section-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="sidebar-section-body">
+          
+<div id="discipline-checkbox-list">
+  
+  
+  <div class="filter-checkbox-item disc-item" data-disc-name="mobil oyun geliştirme">
+    <label>
+      <input
+        type="checkbox"
+        class="disc-checkbox"
+        name="disiplin"
+        value="3"
+        
+        
+      > Mobil Oyun Geliştirme
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item disc-item" data-disc-name="programlama dilleri">
+    <label>
+      <input
+        type="checkbox"
+        class="disc-checkbox"
+        name="disiplin"
+        value="2"
+        
+        
+      > Programlama Dilleri
+    </label>
+    <span class="filter-count">13</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item disc-item" data-disc-name="i̇letişim becerileri">
+    <label>
+      <input
+        type="checkbox"
+        class="disc-checkbox"
+        name="disiplin"
+        value="1"
+        
+        
+      > İletişim Becerileri
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+</div>
+
+        </div>
+      </div>
+      
+
+      <!-- Category Section (accordion) -->
+      
+      <div class="sidebar-section open" id="category-section">
+        <div class="sidebar-section-header" onclick="toggleSection('category-section')">
+          <span class="sidebar-section-title">Kategori</span>
+          <svg class="sidebar-section-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="sidebar-section-body">
+          <input
+            type="text"
+            id="category-search"
+            class="sidebar-inline-search"
+            placeholder="Kategori ara..."
+            oninput="filterSidebarCategories(this.value)"
+          >
+          
+<div id="category-checkbox-list">
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="2 boyutlu tasarım">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="2 Boyutlu Tasarım"
+        
+        
+      > 2 Boyutlu Tasarım
+    </label>
+    <span class="filter-count">9</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="3 boyutlu tasarım">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="3 Boyutlu Tasarım"
+        
+        
+      > 3 Boyutlu Tasarım
+    </label>
+    <span class="filter-count">6</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="afet sonrası psikososyal müdahale">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Afet Sonrası Psikososyal Müdahale"
+        
+        
+      > Afet Sonrası Psikososyal Müdahale
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="afetler, travma ve yas">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Afetler, Travma ve Yas"
+        
+        
+      > Afetler, Travma ve Yas
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="afetlerde çocuk">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Afetlerde Çocuk"
+        
+        
+      > Afetlerde Çocuk
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="akran öğrenimi i̇nisiyatifi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Akran Öğrenimi İnisiyatifi"
+        
+        
+      > Akran Öğrenimi İnisiyatifi
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="antropoloji">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Anthropology"
+        
+        
+      > Antropoloji
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="avrupa çalışmaları">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="European Studies"
+        
+        
+      > Avrupa Çalışmaları
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="bridge karadeniz mooc">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="BRIDGE Black Sea MOOC"
+        
+        
+      > BRIDGE Karadeniz MOOC
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="bilgi güvenliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Bilgi Güvenliği"
+        
+        
+      > Bilgi Güvenliği
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="bilgisayar ve öğretim teknolojileri eğitimi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Computer Education and Instructional Technology"
+        
+        
+      > Bilgisayar ve Öğretim Teknolojileri Eğitimi
+    </label>
+    <span class="filter-count">15</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="bilişim teknolojileri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Bilişim Teknolojileri"
+        
+        
+      > Bilişim Teknolojileri
+    </label>
+    <span class="filter-count">16</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="bilişimle girişimci kadın">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Bilişimle Girişimci Kadın"
+        
+        
+      > Bilişimle Girişimci Kadın
+    </label>
+    <span class="filter-count">11</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="bilişsel bilim">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Cognitive Science"
+        
+        
+      > Bilişsel Bilim
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="bulut teknolojileri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Bulut Teknolojileri"
+        
+        
+      > Bulut Teknolojileri
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="computer engineering">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Computer Engineering"
+        
+        
+      > Computer Engineering
+    </label>
+    <span class="filter-count">12</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="deniz bilimleri enstitüsü">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Institute Of Marine Sciences"
+        
+        
+      > Deniz Bilimleri Enstitüsü
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="ders hakkında...">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Ders Hakkında..."
+        
+        
+      > Ders Hakkında...
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="dijital pazarlama">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Dijital Pazarlama"
+        
+        
+      > Dijital Pazarlama
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="diğer kaynaklar">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Diğer Kaynaklar"
+        
+        
+      > Diğer Kaynaklar
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="educational sciences">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Educational Sciences"
+        
+        
+      > Educational Sciences
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="elektrik-elektronik mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Electrical and Electronics Engineering"
+        
+        
+      > Elektrik-Elektronik Mühendisliği
+    </label>
+    <span class="filter-count">16</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="endüstri mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Industrial Engineering"
+        
+        
+      > Endüstri Mühendisliği
+    </label>
+    <span class="filter-count">6</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="eğitim">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Eğitim"
+        
+        
+      > Eğitim
+    </label>
+    <span class="filter-count">29</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="eğitim">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Education"
+        
+        
+      > Eğitim
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="eğitim şirketi kursları">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Eğitim Şirketi Kursları"
+        
+        
+      > Eğitim Şirketi Kursları
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="felsefe">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Philosophy"
+        
+        
+      > Felsefe
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="foreign language education">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Foreign Language Education"
+        
+        
+      > Foreign Language Education
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="fotoğraf ve video">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Fotoğraf ve Video"
+        
+        
+      > Fotoğraf ve Video
+    </label>
+    <span class="filter-count">7</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="havacılık ve uzay mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Aerospace Engineering"
+        
+        
+      > Havacılık ve Uzay Mühendisliği
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="information system">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Information System"
+        
+        
+      > Information System
+    </label>
+    <span class="filter-count">16</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="jeodezi ve coğrafi bilgi teknolojileri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Geodetic and Geographic Information Technologies"
+        
+        
+      > Jeodezi ve Coğrafi Bilgi Teknolojileri
+    </label>
+    <span class="filter-count">4</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="kategori 1">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Category 1"
+        
+        
+      > Kategori 1
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="kimya">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Chemistry"
+        
+        
+      > Kimya
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="kimya mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Chemical Engineering"
+        
+        
+      > Kimya Mühendisliği
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="kitaplar, videolar, vs...">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Kitaplar, Videolar, vs..."
+        
+        
+      > Kitaplar, Videolar, vs...
+    </label>
+    <span class="filter-count">9</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="kişisel gelişim">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Kişisel Gelişim"
+        
+        
+      > Kişisel Gelişim
+    </label>
+    <span class="filter-count">12</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="kodluyoruz">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Kodluyoruz"
+        
+        
+      > Kodluyoruz
+    </label>
+    <span class="filter-count">6</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="litvanca">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="THEE - Lietuviešu"
+        
+        
+      > Litvanca
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="maden mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Mining Engineering"
+        
+        
+      > Maden Mühendisliği
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="masaüstü programlama dilleri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Masaüstü Programlama Dilleri"
+        
+        
+      > Masaüstü Programlama Dilleri
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mastermind">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="MasterMind"
+        
+        
+      > MasterMind
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="matematik">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Mathematics"
+        
+        
+      > Matematik
+    </label>
+    <span class="filter-count">7</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mechanical engineering">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Mechanical Engineering"
+        
+        
+      > Mechanical Engineering
+    </label>
+    <span class="filter-count">6</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mesleki gelişim">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Mesleki Gelişim"
+        
+        
+      > Mesleki Gelişim
+    </label>
+    <span class="filter-count">4</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="metalurji ve malzeme mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Metallurgical and Materials Engineering"
+        
+        
+      > Metalurji ve Malzeme Mühendisliği
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mikrodenetleyiciler">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Mikrodenetleyiciler"
+        
+        
+      > Mikrodenetleyiciler
+    </label>
+    <span class="filter-count">8</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mimarlık">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Architecture"
+        
+        
+      > Mimarlık
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mobil programlama dilleri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Mobil Programlama Dilleri"
+        
+        
+      > Mobil Programlama Dilleri
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="modern diller bölümü">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Department of Modern Languages"
+        
+        
+      > Modern Diller Bölümü
+    </label>
+    <span class="filter-count">10</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="multimedya bilişimi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Multimedia Informatics"
+        
+        
+      > Multimedya Bilişimi
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mühendisler için excel">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Mühendisler için Excel"
+        
+        
+      > Mühendisler için Excel
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="mühendislik bilimleri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Engineering Sciences"
+        
+        
+      > Mühendislik Bilimleri
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="odtü kkk yazı merkezi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="METU NCC Writing Center"
+        
+        
+      > ODTÜ KKK Yazı Merkezi
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="odtü kütüphanesi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="METU Library"
+        
+        
+      > ODTÜ Kütüphanesi
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="ofis uygulamaları">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Ofis Uygulamaları"
+        
+        
+      > Ofis Uygulamaları
+    </label>
+    <span class="filter-count">8</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="ortaöğretim fen ve matematik alanları eğitimi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Secondary School Science &amp;amp; Mathematics Education"
+        
+        
+      > Ortaöğretim Fen ve Matematik Alanları Eğitimi
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="ortaöğretim öğrencileri i̇çin">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Ortaöğretim Öğrencileri İçin"
+        
+        
+      > Ortaöğretim Öğrencileri İçin
+    </label>
+    <span class="filter-count">7</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="oyun teknolojileri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Game Technologies"
+        
+        
+      > Oyun Teknolojileri
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="paylaşımlı kurslar">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Paylaşımlı Kurslar"
+        
+        
+      > Paylaşımlı Kurslar
+    </label>
+    <span class="filter-count">51</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="petrol ve doğalgaz mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Petroleum And Natural Gas Engineering"
+        
+        
+      > Petrol ve Doğalgaz Mühendisliği
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="physics">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Physics"
+        
+        
+      > Physics
+    </label>
+    <span class="filter-count">26</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="programlama">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Programlama"
+        
+        
+      > Programlama
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="psikoloji">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Psychology"
+        
+        
+      > Psikoloji
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="sağlık bilişimi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Health Informatics"
+        
+        
+      > Sağlık Bilişimi
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="sağlık kurumu kursları">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Sağlık Kurumu Kursları"
+        
+        
+      > Sağlık Kurumu Kursları
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="sağlıklı ve güvenli i̇şyeri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Sağlıklı ve Güvenli İşyeri"
+        
+        
+      > Sağlıklı ve Güvenli İşyeri
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="servis hizmetleri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Servis Hizmetleri"
+        
+        
+      > Servis Hizmetleri
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="sosyoloji">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Sociology"
+        
+        
+      > Sosyoloji
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="sunum becerileri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Sunum Becerileri"
+        
+        
+      > Sunum Becerileri
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="sürekli eğitim merkezi (sem)">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Sürekli Eğitim Merkezi (SEM)"
+        
+        
+      > Sürekli Eğitim Merkezi (SEM)
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="thee - türkçe">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="THEE - Türkçe"
+        
+        
+      > THEE - Türkçe
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="tarih">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="History"
+        
+        
+      > Tarih
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="teknoloji a.ş. kursları">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Teknoloji A.Ş. Kursları"
+        
+        
+      > Teknoloji A.Ş. Kursları
+    </label>
+    <span class="filter-count">11</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="temel i̇ngilizce bölümü">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Department of Basic English"
+        
+        
+      > Temel İngilizce Bölümü
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="uluslararası i̇lişkiler">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="International Relations"
+        
+        
+      > Uluslararası İlişkiler
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="uygulamalı matematik enstitüsü">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Institute of Applied Mathematics"
+        
+        
+      > Uygulamalı Matematik Enstitüsü
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="verimlilik araçları">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Verimlilik Araçları"
+        
+        
+      > Verimlilik Araçları
+    </label>
+    <span class="filter-count">4</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="web tasarım araçları">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Web Tasarım Araçları"
+        
+        
+      > Web Tasarım Araçları
+    </label>
+    <span class="filter-count">7</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="web ve tasarım">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Web ve Tasarım"
+        
+        
+      > Web ve Tasarım
+    </label>
+    <span class="filter-count">4</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="webinarlar">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Webinarlar"
+        
+        
+      > Webinarlar
+    </label>
+    <span class="filter-count">6</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="yabancı diller yüksekokulu">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="School of Foreign Languages"
+        
+        
+      > Yabancı Diller Yüksekokulu
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="yeni teknolojiler">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Yeni Teknolojiler"
+        
+        
+      > Yeni Teknolojiler
+    </label>
+    <span class="filter-count">4</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="yunan dili ve edebiyatı">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="m-game - Ελληνικά"
+        
+        
+      > Yunan Dili ve Edebiyatı
+    </label>
+    <span class="filter-count">15</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="yükseköğretimde göz i̇zleme ile öğretim - thee">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Teaching in Higher Education via Eye-tracking - THEE"
+        
+        
+      > Yükseköğretimde Göz İzleme ile Öğretim - THEE
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="m-game - español">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="m-game - Español"
+        
+        
+      > m-game - Español
+    </label>
+    <span class="filter-count">15</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="m-game - italiano">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="m-game - Italiano"
+        
+        
+      > m-game - Italiano
+    </label>
+    <span class="filter-count">15</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="m-game - türkçe">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="m-game - Türkçe"
+        
+        
+      > m-game - Türkçe
+    </label>
+    <span class="filter-count">15</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="m-game - i̇ngilizce">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="m-game - English"
+        
+        
+      > m-game - İngilizce
+    </label>
+    <span class="filter-count">15</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="öğrenme kaynakları merkezi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Self-Access Center"
+        
+        
+      > Öğrenme Kaynakları Merkezi
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="öğrenme ve öğretmeyi geliştirme merkezi (ögem)">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Öğrenme ve Öğretmeyi Geliştirme Merkezi (ÖGEM)"
+        
+        
+      > Öğrenme ve Öğretmeyi Geliştirme Merkezi (ÖGEM)
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="öğretmen eğitimi">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Öğretmen Eğitimi"
+        
+        
+      > Öğretmen Eğitimi
+    </label>
+    <span class="filter-count">4</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇ktisat">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Economics"
+        
+        
+      > İktisat
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇letişim becerileri">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="İletişim Becerileri"
+        
+        
+      > İletişim Becerileri
+    </label>
+    <span class="filter-count">9</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇ngilizce">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="THEE - English"
+        
+        
+      > İngilizce
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇ngilizce eğitim dili">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="English Medium Instruction"
+        
+        
+      > İngilizce Eğitim Dili
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇nşaat mühendisliği">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Civil Engineering"
+        
+        
+      > İnşaat Mühendisliği
+    </label>
+    <span class="filter-count">2</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇statistik">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Statistics"
+        
+        
+      > İstatistik
+    </label>
+    <span class="filter-count">1</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇talyanca">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="THEE - Italiano"
+        
+        
+      > İtalyanca
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇ş geliştirme">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="İş Geliştirme"
+        
+        
+      > İş Geliştirme
+    </label>
+    <span class="filter-count">8</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇şletme bölümü">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="Department of Business Administration"
+        
+        
+      > İşletme Bölümü
+    </label>
+    <span class="filter-count">3</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item cat-item" data-cat-name="i̇şletme ve yönetim">
+    <label>
+      <input
+        type="checkbox"
+        class="cat-checkbox"
+        name="kategori"
+        value="İşletme ve Yönetim"
+        
+        
+      > İşletme ve Yönetim
+    </label>
+    <span class="filter-count">6</span>
+  </div>
+  
+  
+</div>
+
+          <button type="button" class="show-more-btn" id="cat-show-more" onclick="toggleCatShowMore()" style="display:none">Daha fazla göster</button>
+        </div>
+      </div>
+      
+
+      <!-- Ücret Durumu Section -->
+      <div class="sidebar-section open" id="price-section">
+        <div class="sidebar-section-header" onclick="toggleSection('price-section')">
+          <span class="sidebar-section-title">Ücret Durumu</span>
+          <svg class="sidebar-section-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="sidebar-section-body">
+          
+<div id="price-checkbox-list">
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="price-checkbox" name="ucret" value="free"
+        
+        
+      > Ücretsiz
+    </label>
+    <span class="filter-count">476</span>
+  </div>
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="price-checkbox" name="ucret" value="cert"
+        
+        
+      > Sertifika Ücretli
+    </label>
+    <span class="filter-count">18</span>
+  </div>
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="price-checkbox" name="ucret" value="paid"
+        
+        
+      > Ücretli
+    </label>
+    <span class="filter-count">4</span>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <!-- Dil Filtresi -->
+      
+      <div class="sidebar-section open" id="language-section">
+        <div class="sidebar-section-header" onclick="toggleSection('language-section')">
+          <span class="sidebar-section-title">Dil</span>
+          <svg class="sidebar-section-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="sidebar-section-body">
+          
+<div id="language-checkbox-list">
+  
+  
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="lang-checkbox" name="dil" value="en"
+        
+        
+      > English
+    </label>
+    <span class="filter-count">237</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="lang-checkbox" name="dil" value="lt"
+        
+        
+      > Lietuviškai
+    </label>
+    <span class="filter-count">5</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="lang-checkbox" name="dil" value="tr"
+        
+        
+      > Türkçe
+    </label>
+    <span class="filter-count">202</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="lang-checkbox" name="dil" value="es"
+        
+        
+      > español
+    </label>
+    <span class="filter-count">14</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="lang-checkbox" name="dil" value="it"
+        
+        
+      > italiano
+    </label>
+    <span class="filter-count">20</span>
+  </div>
+  
+  
+  
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="lang-checkbox" name="dil" value="el"
+        
+        
+      > Ελληνικά
+    </label>
+    <span class="filter-count">15</span>
+  </div>
+  
+  
+</div>
+
+        </div>
+      </div>
+      
+
+      <!-- Format Section -->
+      <div class="sidebar-section open" id="format-section">
+        <div class="sidebar-section-header" onclick="toggleSection('format-section')">
+          <span class="sidebar-section-title">Format</span>
+          <svg class="sidebar-section-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="sidebar-section-body">
+          
+<div id="format-checkbox-list">
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="format-checkbox" name="format" value="online"
+        
+        
+      > Online
+    </label>
+    <span class="filter-count">29</span>
+  </div>
+  <div class="filter-checkbox-item">
+    <label>
+      <input type="checkbox" class="format-checkbox" name="format" value="yuz_yuze"
+        
+        
+      > Yüz Yüze
+    </label>
+    <span class="filter-count">46</span>
+  </div>
+  <div class="filter-checkbox-item is-zero">
+    <label>
+      <input type="checkbox" class="format-checkbox" name="format" value="hibrit"
+        
+        disabled
+      > Hibrit
+    </label>
+    <span class="filter-count">0</span>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+    </form>
+
+    <!-- ── RIGHT RESULTS ── -->
+    <section class="catalog-results">
+      
+
+<div id="course-list-wrap">
+
+  <!-- Active filter chips -->
+  
+
+  <!-- Result bar -->
+  <div class="result-bar">
+    <p class="result-count" id="result-count-label">
+      <strong id="result-count-num">576</strong> eğitim listeleniyor
+    </p>
+    <div class="sort-wrap">
+      <span class="sort-label">Sırala:</span>
+      <select class="sort-select" id="sort-select" name="sirala" form="filter-form"
+              hx-get="/egitimler/" hx-target="#course-list-wrap" hx-swap="outerHTML"
+              hx-push-url="true" hx-trigger="change" hx-include="#filter-form, #hero-search-form">
+        <option value="default" selected>Önerilen</option>
+        <option value="newest" >Yeni eklenenler</option>
+        <option value="free-first" >Ücretsiz Önce</option>
+        <option value="alpha-asc" >A → Z</option>
+        <option value="alpha-desc" >Z → A</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Course list -->
+  <div class="course-list" id="course-list">
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-722/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title"> Kriz Yönetimi</span>
+
+        
+        <p class="course-card-h-desc">Kriz; sebep ve sonuçları tam olarak bilinemeyen, hızlı bir şekilde ortaya çıkan, zaman baskısı yaratan, şirketlerin performanslarını ve ima…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">İletişim Becerileri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/722/" alt=" Kriz Yönetimi" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-739/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title"> Şikayet Yönetimi</span>
+
+        
+        <p class="course-card-h-desc">Dersin birinci bölümünde etkili iletişim konusunda bilgi sahibi olacaksınız. İletişimde görülen engelleri inceleyerek, bu engellerle nasıl …</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">İletişim Becerileri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/739/" alt=" Şikayet Yönetimi" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/sem-328/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge sem">
+            ODTÜ-SEM
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Bilgi Teknolojileri Sertifika Programı - 2. Modül</span>
+
+        
+        <p class="course-card-h-desc">BTSP, öncelikli olarak yaygınlaştırılmasında yarar görülen bilgilere ilişkin konularda bir dizi eğitim programı projesidir. Bu programların…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Bilişim Teknolojileri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Yüz Yüze</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="https://harman.cc.metu.edu.tr/media/courses/images/modul-2-eb1460ee.png" alt="Bilgi Teknolojileri Sertifika Programı - 2. Modül" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/sem-329/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge sem">
+            ODTÜ-SEM
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Bilgi Teknolojileri Sertifika Programı - 3. Modül</span>
+
+        
+        <p class="course-card-h-desc">BTSP, öncelikli olarak yaygınlaştırılmasında yarar görülen bilgilere ilişkin konularda bir dizi eğitim programı projesidir. Bu programların…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Bilişim Teknolojileri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Yüz Yüze</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="https://harman.cc.metu.edu.tr/media/courses/images/modul-3-9fc07eab.png" alt="Bilgi Teknolojileri Sertifika Programı - 3. Modül" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/sem-327/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge sem">
+            ODTÜ-SEM
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Bilgi Teknolojileri Sertifika Programı - 4. Modül</span>
+
+        
+        <p class="course-card-h-desc">BTSP, öncelikli olarak yaygınlaştırılmasında yarar görülen bilgilere ilişkin konularda bir dizi eğitim programı projesidir. Bu programların…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Bilişim Teknolojileri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Yüz Yüze</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="https://harman.cc.metu.edu.tr/media/courses/images/modul-4-a8495a10.png" alt="Bilgi Teknolojileri Sertifika Programı - 4. Modül" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/sem-331/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge sem">
+            ODTÜ-SEM
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Bilgisayar Ağları İleri Düzey (CCNP Enterprise v8)</span>
+
+        
+        <p class="course-card-h-desc">Bu eğitim, büyük ölçekli kurumsal ağların temel mimarisinden (ENCOR) ileri düzey yönlendirme ve hizmetlerine (ENARSI) kadar tüm uzmanlık se…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Bilişim Teknolojileri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Yüz Yüze</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="https://harman.cc.metu.edu.tr/media/courses/images/ccnp-c0c3ff5f.jpg" alt="Bilgisayar Ağları İleri Düzey (CCNP Enterprise v8)" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-711/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Dronelar ve Ticari Amaçlı Kullanımları</span>
+
+        
+        <p class="course-card-h-desc">Bu dersin birinci bölümünde droneların tanımı ve kullanım alanlarından bahsedilimiştir. İkinci bölümünde de drone parçaları listelenmiş ve …</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Yeni Teknolojiler </span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/711/" alt="Dronelar ve Ticari Amaçlı Kullanımları" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/sem-352/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge sem">
+            ODTÜ-SEM
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Eğitimde Yapay Zeka Kullanımı Sertifika Programı</span>
+
+        
+        <p class="course-card-h-desc">● Yapay Zeka Araçlarının Kullanımını Öğrenme: Katılımcılar, yapay zekanın eğitimde nasıl kullanılabileceğini anlamak ve bu araçları etkili …</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Bilişim Teknolojileri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            10.000 TL
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Yüz Yüze</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="https://harman.cc.metu.edu.tr/media/courses/images/egitimdeyapayzeka.jpg" alt="Eğitimde Yapay Zeka Kullanımı Sertifika Programı" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-761/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Erişilebilir İş Yeri Tasarımı</span>
+
+        
+        <p class="course-card-h-desc">Dersimizde mevcut işyerlerinin erişilebilir hale getirilmesi için binaya bitişik çevreden başlayarak bina girişlerinde ve bina içlerinde ya…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Sağlıklı ve Güvenli İşyeri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/761/" alt="Erişilebilir İş Yeri Tasarımı" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-679/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Fotoğrafçılık Teknikleri</span>
+
+        
+        <p class="course-card-h-desc">Fotoğraf çekmeye başlamak için ilk olarak kullanacağız cihazı, yani fotoğraf makinesini tanımanız gerekir. Çoğu modern fotoğraf makinesi di…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Fotoğraf ve Video</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/679/" alt="Fotoğrafçılık Teknikleri" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-708/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Genel İş Sağlığı ve Güvenliği </span>
+
+        
+        <p class="course-card-h-desc">Dünyada sanayi devrimi ile başlayan ve giderek ağırlaşan ortam ve çalışma koşullarının sonucu işçi sayılarında ölüm oranı artmış buna bağlı…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Sağlıklı ve Güvenli İşyeri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/708/" alt="Genel İş Sağlığı ve Güvenliği " loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-698/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Görsel Tasarım İlkeleri</span>
+
+        
+        <p class="course-card-h-desc">Dersin ilk bölümünde temel görsel tasarım ilkeleri hakkında genel bilgiler verilmektedir. Özellikle bilinmesi gereken temel kavramlardan ba…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">2 Boyutlu Tasarım</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/698/" alt="Görsel Tasarım İlkeleri" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-792/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Herkes için Yapay Zeka I</span>
+
+        
+        <p class="course-card-h-desc">Eğitim serisinin ilk dersi olan bu derste yapay zekâyı anlamak için en temel bilgileri inceleyeceğiz. Yapay zekânın sosyal bilimler açısınd…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Kodluyoruz</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/792/" alt="Herkes için Yapay Zeka I" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-794/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Herkes için Yapay Zeka II</span>
+
+        
+        <p class="course-card-h-desc">Beynimiz nesneyi tanımlama, verileri işleme ve ne yapılacağına karar verme yeteneğine sahiptir, böylece karmaşık bir görevi bir saniyede ta…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Kodluyoruz</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/794/" alt="Herkes için Yapay Zeka II" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-666/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">İşinizi İnternete Taşıyın</span>
+
+        
+        <p class="course-card-h-desc">Birinci bölümde e-ticaretin tanımı, önemi, türleri ve faydaları açıklanmıştır. E-ticaret için gerekli olan cihaz, internet, telefon, e-post…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Dijital Pazarlama</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/666/" alt="İşinizi İnternete Taşıyın" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-951/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            METU Learn
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Proje Yönetimi: Kanban</span>
+
+        
+        <p class="course-card-h-desc">Dolore quasi earum ut. Distinctio provident harum porro veritatis perspiciatis quia ea. Beatae officiis ut et vitae. Culpa qui expedita con…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Paylaşımlı Kurslar</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <div class="course-card-h-image-placeholder">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-681/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Python Programlama - 1</span>
+
+        
+        <p class="course-card-h-desc">Programlama, bilgisayar programlarının yazılması, test edilmesi ve bakımının yapılması sürecine verilen isimdir. Bir diğer deyişle programl…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Masaüstü Programlama Dilleri</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/681/" alt="Python Programlama - 1" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-948/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            METU Learn
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Siber Güvenlik: Etik Hacking</span>
+
+        
+        <p class="course-card-h-desc">Sit rem voluptas nam et non sit sunt. Laboriosam nam est veniam est. Iste rerum aliquam libero accusamus. Sed quod ea et. Tempore quo iure …</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Paylaşımlı Kurslar</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <div class="course-card-h-image-placeholder">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-700/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            Bilgeİş
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Tasarım Odaklı Düşünme&#x27;ye Giriş</span>
+
+        
+        <p class="course-card-h-desc">“Tasarım” denince akla genelde ürünlerin kalitesi ve/veya estetik görünümü gelir ancak son zamanlarda tasarımın asıl amacı iyi olmayı teşvi…</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Web ve Tasarım</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Türkçe</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">Online</span>
+          
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/700/" alt="Tasarım Odaklı Düşünme&#x27;ye Giriş" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-1180/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            METU OCW
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Akademik Sözlü Sunum Becerileri</span>
+
+        
+        <p class="course-card-h-desc">İleri Düzey Sunum Becerileri</p>
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Modern Diller Bölümü</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">English</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">139 modül</span>
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <img src="/api/moodle-image/1180/" alt="Akademik Sözlü Sunum Becerileri" loading="lazy">
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-1237/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            METU OCW
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Yapısal Sağlık İzleme</span>
+
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">İnşaat Mühendisliği</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">English</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">2 modül</span>
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <div class="course-card-h-image-placeholder">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-1255/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            METU OCW
+          </span>
+        </div>
+
+        <span class="course-card-h-title">[EE 362] Elektromekanik Enerji Dönüşümü II</span>
+
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Elektrik-Elektronik Mühendisliği</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">English</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">49 modül</span>
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <div class="course-card-h-image-placeholder">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-1256/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            METU OCW
+          </span>
+        </div>
+
+        <span class="course-card-h-title">Statik Güç Dönüşümü I</span>
+
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Elektrik-Elektronik Mühendisliği</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">English</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">55 modül</span>
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <div class="course-card-h-image-placeholder">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        
+      </div>
+    </article>
+    
+    <article
+      class="course-card-h"
+      style="cursor:pointer"
+      hx-get="/api/course/moodle-1257/"
+      hx-target="#drawer-content"
+      @click="drawerOpen = true"
+    >
+      <!-- Body -->
+      <div class="course-card-h-body">
+        <div class="course-card-h-top">
+          <span class="course-source-badge moodle">
+            METU OCW
+          </span>
+        </div>
+
+        <span class="course-card-h-title">[EE464] - Statik Güç Dönüşümü - II</span>
+
+        
+
+        <div class="course-card-h-meta">
+          
+          <span class="course-meta-item">Elektrik-Elektronik Mühendisliği</span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">English</span>
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">
+            Ücretsiz
+          </span>
+          
+          
+          <span class="course-meta-sep"></span>
+          <span class="course-meta-item">48 modül</span>
+          
+        </div>
+      </div>
+
+      <!-- Thumbnail -->
+      <div class="course-card-h-image">
+        
+        <div class="course-card-h-image-placeholder">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        
+      </div>
+    </article>
+    
+  </div>
+
+  <!-- Pagination -->
+  
+  <nav class="pagination-wrap" id="pagination-wrap" aria-label="Sayfalama">
+    
+    <span class="page-link page-link-prev disabled" aria-disabled="true">
+      <i data-lucide="chevron-left" class="w-4 h-4"></i>
+      <span class="page-link-label">Önceki</span>
+    </span>
+    
+
+    <div class="page-numbers">
+      
+        
+        <span class="page-number active" aria-current="page">1</span>
+        
+      
+        
+        <a class="page-number"
+           href="?&sayfa=2"
+           hx-get="/egitimler/?&sayfa=2"
+           hx-target="#course-list-wrap" hx-swap="outerHTML" hx-push-url="true">2</a>
+        
+      
+        
+        <span class="page-ellipsis">…</span>
+        
+      
+        
+        <a class="page-number"
+           href="?&sayfa=24"
+           hx-get="/egitimler/?&sayfa=24"
+           hx-target="#course-list-wrap" hx-swap="outerHTML" hx-push-url="true">24</a>
+        
+      
+    </div>
+
+    
+    <a class="page-link page-link-next"
+       href="?&sayfa=2"
+       hx-get="/egitimler/?&sayfa=2"
+       hx-target="#course-list-wrap" hx-swap="outerHTML" hx-push-url="true"
+       aria-label="Sonraki sayfa">
+      <span class="page-link-label">Sonraki</span>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+    </a>
+    
+  </nav>
+  
+
+  <!-- Empty State -->
+  
+
+</div>
+
+    </section>
+  </div><!-- /.catalog-body -->
+</div><!-- /.catalog-page -->
+
+<script>
+(function () {
+  /* ── Category inline search (sadece görünürlük, filtreleme sunucu
+     tarafında; bu sadece sidebar'daki listeyi anlık daraltır) ── */
+  window.filterSidebarCategories = function (val) {
+    const q = val.toLowerCase();
+    document.querySelectorAll('.cat-item').forEach(el => {
+      el.style.display = el.dataset.catName.includes(q) ? '' : 'none';
+    });
+  };
+
+  /* ── Accordion ── */
+  window.toggleSection = function (id) {
+    const sec = document.getElementById(id);
+    sec.classList.toggle('open');
+  };
+
+  /* ── Show more categories (collapse to 8 by default) ── */
+  const I18N_SHOW_MORE = "Daha fazla göster";
+  const I18N_SHOW_LESS = "Daha az göster";
+  const MAX_CAT_VISIBLE = 8;
+  let catExpanded = false;
+  const catItems = document.querySelectorAll('.cat-item');
+  const showMoreBtn = document.getElementById('cat-show-more');
+  if (catItems.length > MAX_CAT_VISIBLE && showMoreBtn) {
+    showMoreBtn.style.display = '';
+    catItems.forEach((el, i) => { if (i >= MAX_CAT_VISIBLE) el.style.display = 'none'; });
+    showMoreBtn.textContent = `${I18N_SHOW_MORE} (${catItems.length - MAX_CAT_VISIBLE})`;
+  }
+  window.toggleCatShowMore = function () {
+    catExpanded = !catExpanded;
+    catItems.forEach((el, i) => {
+      if (i >= MAX_CAT_VISIBLE) el.style.display = catExpanded ? '' : 'none';
+    });
+    if (showMoreBtn) showMoreBtn.textContent = catExpanded ? I18N_SHOW_LESS : `${I18N_SHOW_MORE} (${catItems.length - MAX_CAT_VISIBLE})`;
+  };
+})();
+</script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-100 w-full border-t border-zinc-200 py-12 px-8">
+        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                
+                    <img src="/media/site/footer/Logo_of_METU.svg.png" alt="METULearn" class="h-12 w-auto mb-1">
+                
+                
+                <a href="/yonetim/surum-notlari/" class="inter text-[10px] text-zinc-400 hover:text-primary transition-colors mt-2">v1.2.58</a>
+                
+            </div>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                
+                <a class="inter text-xs uppercase tracking-widest text-zinc-500 hover:text-primary transition-all font-semibold" href="/sayfa/terms-of-use/">Kullanım Koşulları</a>
+                
+                <a class="inter text-xs uppercase tracking-widest text-zinc-500 hover:text-primary transition-all font-semibold" href="/sayfa/hakkmzda/">Hakkımızda</a>
+                
+                <a class="inter text-xs uppercase tracking-widest text-zinc-500 hover:text-primary transition-all font-semibold" href="/dj-yonetim/">Yönetim</a>
+            </div>
+            <div class="flex gap-5">
+                
+                
+                
+                
+                
+                
+                <a href="mailto:admin@deneme.com" class="group">
+                    <i data-lucide="mail" class="w-5 h-5 text-zinc-400 group-hover:text-primary transition-colors"></i>
+                </a>
+                
+            </div>
+        </div>
+    </footer>
+    <script src='https://forms.metu.edu.tr/agent/embedjs/019b92e9788c7cbc951b67afffff1ba41528/embed.js'>
+</script>
+
+    <!-- Eğitim Detay Çekmece (Overlay Drawer) -->
+    <div class="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm flex justify-end"
+         x-show="drawerOpen"
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         x-cloak
+         @click.self="drawerOpen = false">
+        <div class="w-full md:w-[600px] h-full bg-white shadow-2xl overflow-y-auto relative no-scrollbar"
+             x-show="drawerOpen"
+             x-transition:enter="transition ease-out duration-300 transform"
+             x-transition:enter-start="translate-x-full"
+             x-transition:enter-end="translate-x-0"
+             x-transition:leave="transition ease-in duration-200 transform"
+             x-transition:leave-start="translate-x-0"
+             x-transition:leave-end="translate-x-full">
+            <button @click="drawerOpen = false" class="absolute top-6 right-6 p-2 bg-zinc-100 hover:bg-zinc-200 rounded-full transition-all z-20">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div id="drawer-content">
+                <div class="flex items-center justify-center h-64">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Widgetları -->
+    
+    <!-- Jotform Chatbot -->
+    <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function() {
+        window.AgentInitializer.init({
+          agentId: "019b92e9788c7cbc951b67afffff1ba41528",
+          rootId: "JotformAgent-019b92e9788c7cbc951b67afffff1ba41528",
+          isDraggable: false,
+          background: "linear-gradient(180deg, #E31837 0%, #E31837 100%)",
+          buttonBackground: "#E31837",
+          variant: "compact",
+          greeting: "Merhaba! Nasıl yardımcı olabilirim?",
+          collectingLog: "Gönderiliyor...",
+        });
+      });
+    </script>
+    
+
+    <script>
+        lucide.createIcons();
+        document.body.addEventListener('htmx:afterSwap', function() {
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        });
+
+        
+    </script>
+    
+    
+</body>
+</html>

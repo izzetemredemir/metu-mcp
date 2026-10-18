@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- metu-mcp icon: an original mortarboard mark (not the METU logo). -->
+  <rect width="256" height="256" rx="56" fill="#A3162D"/>
+  <path d="M74 132v38c0 24 108 24 108 0v-38l-54 26z" fill="#F4D9DE"/>
+  <path d="M128 62 228 110 128 158 28 110z" fill="#FFFFFF"/>
+  <path d="M128 110 196 128v44" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="196" cy="182" r="11" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,21 @@
+# Replace mcp.example.com with your (sub)domain; Caddy obtains the TLS certificate automatically.
+mcp.example.com {
+	encode zstd gzip
+
+	handle /mcp {
+		reverse_proxy 127.0.0.1:8787 {
+			# Streamable HTTP may answer with SSE: do not buffer.
+			flush_interval -1
+		}
+	}
+	handle /healthz {
+		reverse_proxy 127.0.0.1:8787
+	}
+	handle {
+		respond "metu-mcp — MCP endpoint is /mcp" 200
+	}
+
+	log {
+		output file /var/log/caddy/metu-mcp.log
+	}
+}

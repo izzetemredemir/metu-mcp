@@ -1,0 +1,769 @@
+# Official METU link catalog — the fallback layer.
+#
+# When the server cannot answer from its own data (login required or not collected),
+# it points the student to the right official page from this list and says what they will find there.
+#
+# Fields:
+#   id            unique kebab-case id
+#   title         {en, tr}
+#   url           official https URL (only *.metu.edu.tr or government sites)
+#   category      calendar | registration | fees | regulations | systems | amnesty | graduate-school |
+#                 department | courses | dining | parking | transport | dormitory | health | sports |
+#                 library | it | international | campus | contact
+#   audience      any of: all, undergraduate, graduate, <department code>
+#   requires_auth false, or the system name the student must log into (oibs | student | odtuclass | metumail | tasitpulu | rez)
+#   served_by     MCP tool that also answers this from live data (optional)
+#   seasonal      true when the page only exists during an application window (never hidden by the link checker)
+#   keywords      extra search words (Turkish and English)
+#   note          {en, tr} what the student will find / do there
+#   last_verified YYYY-MM-DD (updated by `metu-mcp check-links`, stored in the DB; this is the manual date)
+
+# ---------- Academic calendar & amnesty (most asked) ----------
+- id: oidb-academic-calendar
+  title: { en: Academic calendar, tr: Akademik Takvim }
+  url: https://oidb.metu.edu.tr/tr/akademik-takvim
+  category: calendar
+  audience: [all]
+  requires_auth: false
+  served_by: metu_calendar_events
+  keywords: [ekle-sil, ekle bırak, add-drop, kayıt yenileme, registration, final, dönem sonu, tatil, holiday]
+  note: { en: "Official dates for registration, add-drop, withdrawal, finals, grade deadlines and holidays.", tr: "Kayıt, ekle-sil, dersten çekilme, final, not girişi ve tatillerin resmi tarihleri." }
+  last_verified: 2026-09-30
+
+- id: amnesty-7592-principles
+  title: { en: "Law 7592 / Provisional Article 85 amnesty — implementation principles", tr: "7592 sayılı Kanun Geçici 85. madde uygulama esasları" }
+  url: https://oidb.metu.edu.tr/tr/odtu-duyurulari/7592-sayili-af-kanununun-gecici-85-maddesi-ile-ilgili-uygulama-esaslari
+  category: amnesty
+  audience: [all]
+  requires_auth: false
+  keywords: [af, öğrenci affı, 7592, geçici 85, ilişik kesilen, amnesty, re-enrolment]
+  note: { en: "Rules for former students returning under the 2026 student amnesty (Law 7592).", tr: "2026 öğrenci affı (7592 sayılı Kanun) kapsamında dönen eski öğrencilere ilişkin kurallar." }
+  last_verified: 2026-09-30
+
+- id: amnesty-7592-application
+  title: { en: "Law 7592 amnesty — application process announcement", tr: "7592 sayılı Af Kanunu başvuru süreçleri hakkında duyuru" }
+  url: https://oidb.metu.edu.tr/tr/odtu-duyurulari/7592-sayili-af-kanunu-basvuru-surecleri-hakkinda-duyuru-0
+  category: amnesty
+  audience: [all]
+  requires_auth: false
+  keywords: [af başvurusu, af başvuru tarihleri, amnesty application]
+  note: { en: "How and when to apply under the amnesty.", tr: "Af kapsamında nasıl ve ne zaman başvurulacağı." }
+  last_verified: 2026-09-30
+
+- id: amnesty-7592-english-prep-5-1
+  title: { en: "Amnesty principles, article 5.1 change (English Preparatory Unit, 23.09.2026)", tr: "Af esasları 5.1 madde değişikliği (Temel İngilizce Birimi)" }
+  url: https://oidb.metu.edu.tr/tr/odtu-duyurulari/temel-ingilizce-birimi-7592-sayili-kanun-ile-2547-sayili-yuksekogretim-kanununa
+  category: amnesty
+  audience: [undergraduate]
+  requires_auth: false
+  keywords: [af, hazırlık, temel ingilizce, prep school, 5.1]
+  note: { en: "Change affecting amnesty students who return to the English Preparatory Unit.", tr: "Temel İngilizce Birimi'ne dönen af öğrencilerini etkileyen değişiklik." }
+  last_verified: 2026-09-30
+
+- id: oidb-announcements
+  title: { en: "Registrar's Office announcements", tr: ÖİDB duyuruları }
+  url: https://oidb.metu.edu.tr/tr/announcements
+  category: registration
+  audience: [all]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [duyuru, öidb, öğrenci işleri, registrar]
+  note: { en: "All registrar announcements (senate decisions, resit exams, deadlines).", tr: "Tüm ÖİDB duyuruları (senato kararları, bütünleme, son tarihler)." }
+  last_verified: 2026-09-30
+
+# ---------- Systems that require login ----------
+- id: oibs
+  title: { en: Student Information System (OİBS), tr: Öğrenci İşleri Bilgi Sistemi (OİBS) }
+  url: https://oibs.metu.edu.tr/
+  category: systems
+  audience: [all]
+  requires_auth: oibs
+  keywords: [transkript, transcript, not, grades, gpa, ortalama, kayıt, registration, harç, borç, danışman, advisor, program, tezli, tezsiz, azami süre]
+  note: { en: "Personal records: registration, grades, transcript, fee status, which programme you are enrolled in. Log in with your METU account.", tr: "Kişisel kayıtlar: kayıt, notlar, transkript, harç durumu, hangi programa kayıtlı olduğun. ODTÜ hesabınla giriş yap." }
+  last_verified: 2026-09-30
+
+- id: student-portal
+  title: { en: Student portal (student.metu.edu.tr), tr: Öğrenci portalı }
+  url: https://student.metu.edu.tr/
+  category: systems
+  audience: [all]
+  requires_auth: student
+  keywords: [sınav programım, my exam schedule, ders programım, my schedule, kişisel]
+  note: { en: "Personal weekly schedule and personal exam schedule. Requires METU login.", tr: "Kişisel haftalık ders programı ve kişisel sınav programı. ODTÜ girişi gerekir." }
+  last_verified: 2026-09-30
+
+- id: oibs2-course-schedule
+  title: { en: "Offered courses & sections (course schedule)", tr: Açılan dersler / ders programı }
+  url: https://oibs2.metu.edu.tr/View_Program_Course_Details_64/
+  category: courses
+  audience: [all]
+  requires_auth: false
+  keywords: [açılan dersler, şube, section, hoca, instructor, derslik, classroom, kontenjan, capacity, ders saati]
+  note: { en: "Public list of offered courses per department and term: sections, instructors, times, rooms, capacity. Pick department and semester, then the course.", tr: "Bölüm ve döneme göre açılan dersler: şubeler, hocalar, saatler, derslikler, kontenjan. Bölümü ve dönemi seç, sonra dersi seç." }
+  last_verified: 2026-09-30
+
+- id: odtuclass
+  title: { en: ODTÜClass (Moodle), tr: ODTÜClass }
+  url: https://odtuclass.metu.edu.tr
+  category: systems
+  audience: [all]
+  requires_auth: odtuclass
+  keywords: [odtuclass, moodle, ödev, assignment, ders materyali, lecture notes, quiz]
+  note: { en: "Course pages, assignments, lecture materials and course announcements. Redirects to the current term's host.", tr: "Ders sayfaları, ödevler, ders materyalleri ve ders duyuruları. O dönemin adresine yönlendirir." }
+  last_verified: 2026-09-30
+
+- id: webwork
+  title: { en: WeBWorK online homework, tr: WeBWorK çevrim içi ödev sistemi }
+  url: https://webwork.metu.edu.tr/webwork2/
+  category: systems
+  audience: [all]
+  requires_auth: webwork
+  keywords: [webwork, online homework, çevrim içi ödev, ödev, homework, problem set, me210, me305, me306]
+  note: { en: "Online homework system used by some courses (the course list currently shows ME210, ME305, ME306). Log in with the account your instructor announces.", tr: "Bazı derslerin kullandığı çevrim içi ödev sistemi (ders listesinde şu an ME210, ME305, ME306 var). Hocanın duyurduğu hesapla giriş yapılır." }
+  last_verified: 2026-10-05
+
+- id: metu-app
+  title: { en: "METU App (unofficial, student-made)", tr: "METU App (resmi değil, öğrenci yapımı)" }
+  url: https://metuapp.ceng.metu.edu.tr/
+  category: systems
+  audience: [all]
+  requires_auth: false
+  keywords: [metu app, mobil uygulama, mobile app, uygulama, app, telefon, phone, ring, yemekhane]
+  note: { en: "Mobile app built by Computer Engineering students (not an official METU service): campus map, ring times, cafeteria menu, ODTÜClass and calendar in one place. Check official pages for anything binding.", tr: "Bilgisayar Mühendisliği öğrencilerinin geliştirdiği mobil uygulama (resmi ODTÜ hizmeti değil): kampüs haritası, ring saatleri, yemek menüsü, ODTÜClass ve takvim bir arada. Bağlayıcı bilgiler için resmi sayfalara bak." }
+  last_verified: 2026-10-05
+
+- id: metumail
+  title: { en: METU Mail, tr: METU Mail }
+  url: https://metumail.metu.edu.tr/index.html
+  category: systems
+  audience: [all]
+  requires_auth: metumail
+  keywords: [e-posta, email, mail, webmail]
+  note: { en: "University e-mail.", tr: "Üniversite e-postası." }
+  last_verified: 2026-09-30
+
+- id: bidb-faq
+  title: { en: "Computer Center FAQ (account & password)", tr: BİDB SSS }
+  url: https://faq.cc.metu.edu.tr/tr
+  category: it
+  audience: [all]
+  requires_auth: false
+  keywords: [şifre, password, hesap, account, eduroam, vpn, wifi, kablosuz]
+  note: { en: "Help for METU user account, password reset, eduroam and VPN.", tr: "ODTÜ kullanıcı hesabı, şifre sıfırlama, eduroam ve VPN yardımı." }
+  last_verified: 2026-09-30
+
+# ---------- Registrar: registration, fees, regulations ----------
+- id: oidb-regulations
+  title: { en: Regulations, tr: Yönetmelikler }
+  url: https://oidb.metu.edu.tr/tr/yonetmelikler
+  category: regulations
+  audience: [all]
+  requires_auth: false
+  keywords: [yönetmelik, regulation, mevzuat, azami süre, maximum duration]
+  note: { en: "Undergraduate and graduate education regulations (maximum study duration, course load, etc.).", tr: "Lisans ve lisansüstü eğitim yönetmelikleri (azami süre, ders yükü vb.)." }
+  last_verified: 2026-09-30
+
+- id: oidb-who-registers-how
+  title: { en: "Registration: who registers how", tr: Kim nasıl kayıt yapmalı }
+  url: https://oidb.metu.edu.tr/index.php/tr/kim-nasil-kayit-yapmali
+  category: registration
+  audience: [all]
+  requires_auth: false
+  keywords: [kayıt, registration, etkileşimli kayıt, danışman onayı]
+  note: { en: "Step-by-step registration instructions per student type.", tr: "Öğrenci türüne göre adım adım kayıt talimatları." }
+  last_verified: 2026-09-30
+
+- id: oidb-tuition-payments
+  title: { en: Tuition / contribution fee payments, tr: Katkı payı ödemeleri }
+  url: https://oidb.metu.edu.tr/index.php/tr/katki-payi-odemeleri
+  category: fees
+  audience: [all]
+  requires_auth: false
+  keywords: [harç, katkı payı, tuition, ödeme, payment, iade, refund]
+  note: { en: "How to pay tuition / contribution fees, deadlines and refunds.", tr: "Katkı payı / öğrenim ücreti nasıl ödenir, son tarihler ve iadeler." }
+  last_verified: 2026-09-30
+
+- id: oidb-tuition-amounts
+  title: { en: Tuition / contribution fee amounts, tr: Katkı payı miktarları }
+  url: https://oidb.metu.edu.tr/index.php/tr/katki-payi-miktarlari
+  category: fees
+  audience: [all]
+  requires_auth: false
+  keywords: [harç ne kadar, ücret, fee amount, katkı payı miktarı]
+  note: { en: "Fee amounts per programme and student type. Your personal balance is in OİBS.", tr: "Programa ve öğrenci türüne göre ücret miktarları. Kişisel borcun OİBS'de." }
+  last_verified: 2026-09-30
+
+- id: oidb-forms
+  title: { en: Registrar forms, tr: Formlar }
+  url: https://oidb.metu.edu.tr/index.php/tr/formlar
+  category: registration
+  audience: [all]
+  requires_auth: false
+  keywords: [form, dilekçe, petition]
+  note: { en: "Downloadable registrar forms and petitions.", tr: "İndirilebilir ÖİDB formları ve dilekçeler." }
+  last_verified: 2026-09-30
+
+- id: oidb-student-certificate
+  title: { en: Student certificate, tr: Öğrenci belgesi }
+  url: https://oidb.metu.edu.tr/index.php/tr/ogrenci-belgesi
+  category: registration
+  audience: [all]
+  requires_auth: false
+  keywords: [öğrenci belgesi, student certificate, e-devlet, belge]
+  note: { en: "How to get a student certificate (e-Devlet or registrar).", tr: "Öğrenci belgesi nasıl alınır (e-Devlet veya ÖİDB)." }
+  last_verified: 2026-09-30
+
+- id: oidb-academic-catalog
+  title: { en: Academic catalog, tr: Akademik Katalog }
+  url: https://oidb.metu.edu.tr/tr/akademik-katalog
+  category: courses
+  audience: [all]
+  requires_auth: false
+  keywords: [katalog, catalog, müfredat, curriculum, ders içeriği, kredi, akts, ects, önkoşul, prerequisite]
+  note: { en: "Programme curricula and course descriptions (credits, ECTS, prerequisites).", tr: "Program müfredatları ve ders tanımları (kredi, AKTS, önkoşullar)." }
+  last_verified: 2026-09-30
+
+- id: course-catalog
+  title: { en: Course catalog (catalog.metu.edu.tr), tr: Ders kataloğu }
+  url: https://catalog.metu.edu.tr/
+  category: courses
+  audience: [all]
+  requires_auth: false
+  keywords: [ders kodu, course code, kredi, credit, önkoşul, prerequisite, müfredat]
+  note: { en: "Search course codes, credits, descriptions and prerequisites by department.", tr: "Bölüme göre ders kodu, kredi, açıklama ve önkoşul arama." }
+  last_verified: 2026-09-30
+
+- id: metulearn
+  title: { en: "METULearn: trainings and certificate programmes", tr: "METULearn: eğitimler ve sertifika programları" }
+  url: https://learn.metu.edu.tr/egitimler/
+  category: courses
+  audience: [all]
+  requires_auth: false
+  served_by: metu_trainings
+  keywords: [metulearn, eğitim, training, sertifika, certificate, sürekli eğitim, continuing education, odtü-sem, sem, bilgeiş, ocw, açık ders, online kurs]
+  note: { en: "Catalog of METU continuing-education trainings: ODTÜ-SEM certificate programmes, free Bilgeİş online courses and METU OCW open courseware, with format, price and start dates.", tr: "ODTÜ sürekli eğitim kataloğu: ODTÜ-SEM sertifika programları, ücretsiz Bilgeİş çevrim içi eğitimleri ve ODTÜ açık ders malzemeleri; format, ücret ve başlangıç tarihleriyle." }
+  last_verified: 2026-10-05
+
+- id: dil-language-courses
+  title: { en: "School of Foreign Languages: language courses (TOEFL, IELTS, General English)", tr: "Yabancı Diller Yüksekokulu dil kursları (TOEFL, IELTS, Genel İngilizce)" }
+  url: https://dil.metu.edu.tr/
+  category: courses
+  audience: [all]
+  requires_auth: false
+  served_by: metu_campus_services
+  keywords: [dil kursu, language course, ingilizce kursu, english course, toefl, ielts, yds, genel ingilizce, general english, seviye tespit, placement, toefl ibt, ydyo]
+  note: { en: "Paid English courses on campus or online with fees, term dates and the placement exam; METU is an official TOEFL iBT test centre. Pages are in Turkish.", tr: "Yüz yüze veya çevrim içi ücretli İngilizce kursları: ücretler, dönem tarihleri ve seviye tespit sınavı; ODTÜ resmi TOEFL iBT sınav merkezidir." }
+  last_verified: 2026-10-05
+
+- id: oidb-faq
+  title: { en: Registrar FAQ, tr: ÖİDB Sıkça Sorulan Sorular }
+  url: https://oidb.metu.edu.tr/tr/sikca-sorulan-sorular-sss
+  category: registration
+  audience: [all]
+  requires_auth: false
+  keywords: [sss, faq, soru]
+  note: { en: "Frequently asked questions about registration, fees and documents.", tr: "Kayıt, ücretler ve belgeler hakkında sıkça sorulan sorular." }
+  last_verified: 2026-09-30
+
+- id: oidb-contact-form
+  title: { en: Registrar contact form, tr: ÖİDB iletişim formu }
+  url: https://oidb.metu.edu.tr/index.php/tr/iletisim-formu
+  category: contact
+  audience: [all]
+  requires_auth: false
+  keywords: [iletişim, contact, soru sor, ask]
+  note: { en: "Ask the registrar directly when a case is not covered by the rules.", tr: "Kurallarla çözülemeyen durumlarda doğrudan ÖİDB'ye sor." }
+  last_verified: 2026-09-30
+
+- id: oidb-course-withdrawal
+  title: { en: Course withdrawal, tr: Dersten çekilme }
+  url: https://oidb.metu.edu.tr/tr/dersten-cekilme
+  category: registration
+  audience: [all]
+  requires_auth: false
+  keywords: [dersten çekilme, withdraw, withdrawal, W notu]
+  note: { en: "Rules for withdrawing from a course.", tr: "Dersten çekilme kuralları." }
+  last_verified: 2026-09-30
+
+# ---------- Graduate schools ----------
+- id: fbe
+  title: { en: Graduate School of Natural and Applied Sciences, tr: Fen Bilimleri Enstitüsü }
+  url: https://fbe.metu.edu.tr
+  category: graduate-school
+  audience: [graduate]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [fbe, enstitü, graduate school, tez, thesis, yüksek lisans, doktora, başvuru]
+  note: { en: "Graduate applications, thesis procedures and deadlines for science & engineering programmes (incl. CEIT graduate programmes).", tr: "Fen ve mühendislik programları (BÖTE lisansüstü dahil) için lisansüstü başvuru, tez işlemleri ve son tarihler." }
+  last_verified: 2026-09-30
+
+- id: sbe
+  title: { en: Graduate School of Social Sciences, tr: Sosyal Bilimler Enstitüsü }
+  url: https://sbe.metu.edu.tr/
+  category: graduate-school
+  audience: [graduate]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [sbe, enstitü, social sciences]
+  note: { en: "Graduate procedures for social science programmes.", tr: "Sosyal bilimler programları için lisansüstü işlemler." }
+  last_verified: 2026-09-30
+
+- id: ii
+  title: { en: Graduate School of Informatics, tr: Enformatik Enstitüsü }
+  url: https://ii.metu.edu.tr/
+  category: graduate-school
+  audience: [graduate]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [enformatik, informatics, is 100]
+  note: { en: "Informatics programmes and the IS 100 exemption exam.", tr: "Enformatik programları ve IS 100 muafiyet sınavı." }
+  last_verified: 2026-09-30
+
+# ---------- Department: Chemistry (static site, news without years; link only) ----------
+- id: chem-news
+  title: { en: Chemistry department news and announcements, tr: Kimya Bölümü haber ve duyuruları }
+  url: https://chem.metu.edu.tr/news
+  category: department
+  audience: [chem]
+  requires_auth: false
+  keywords: [kimya, chemistry, chem, duyuru, announcement, araştırma görevlisi, lab schedule]
+  note: { en: "The Chemistry department's own news page (exam results, lab schedules, research assistant calls). Items carry day and month only, newest first.", tr: "Kimya Bölümü'nün haber sayfası (sınav sonuçları, laboratuvar programları, araştırma görevlisi ilanları). Kayıtlarda yalnızca gün ve ay var, en yenisi en üstte." }
+  last_verified: 2026-10-05
+
+# ---------- Department: CEIT (BÖTE) ----------
+- id: ceit-home
+  title: { en: CEIT department home, tr: BÖTE bölüm ana sayfası }
+  url: https://ceit.metu.edu.tr/tr
+  category: department
+  audience: [ceit]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [böte, ceit, bilgisayar ve öğretim teknolojileri]
+  note: { en: "Computer Education and Instructional Technology department site and announcements.", tr: "Bilgisayar ve Öğretim Teknolojileri Eğitimi bölüm sitesi ve duyuruları." }
+  last_verified: 2026-09-30
+
+- id: ceit-scientific-deficiency
+  title: { en: CEIT scientific preparation (deficiency) courses, tr: BÖTE bilimsel hazırlık dersleri }
+  url: https://ceit.metu.edu.tr/en/scientific-deficiency-courses
+  category: department
+  audience: [ceit, graduate]
+  requires_auth: false
+  keywords: [bilimsel hazırlık, scientific preparation, deficiency, eksik ders]
+  note: { en: "Which scientific-preparation courses graduate students without a CEIT background must take.", tr: "BÖTE dışından gelen lisansüstü öğrencilerin alması gereken bilimsel hazırlık dersleri." }
+  last_verified: 2026-09-30
+
+- id: ceit-graduate-schedule
+  title: { en: CEIT graduate course schedule, tr: BÖTE lisansüstü ders programı }
+  url: https://ceit.metu.edu.tr/en/graduate-course-schedule
+  category: department
+  audience: [ceit, graduate]
+  requires_auth: false
+  keywords: [ders programı, course schedule, lisansüstü, graduate]
+  note: { en: "Weekly schedule of CEIT graduate courses for the current term.", tr: "Bu dönemin BÖTE lisansüstü haftalık ders programı." }
+  last_verified: 2026-09-30
+
+- id: ceit-graduate-program
+  title: { en: CEIT graduate programmes, tr: BÖTE lisansüstü programlar }
+  url: https://ceit.metu.edu.tr/en/graduate-program
+  category: department
+  audience: [ceit, graduate]
+  requires_auth: false
+  keywords: [yüksek lisans, doktora, tezli, tezsiz, master, phd, program]
+  note: { en: "CEIT MS/PhD programme structure. Check in OİBS whether you are in the thesis or non-thesis programme — it changes maximum duration and course load.", tr: "BÖTE yüksek lisans/doktora program yapısı. Tezli mi tezsiz mi olduğunu OİBS'den kontrol et — azami süre ve ders yükü buna göre değişir." }
+  last_verified: 2026-09-30
+
+- id: ceit-important-information
+  title: { en: CEIT important information, tr: BÖTE önemli bilgiler }
+  url: https://ceit.metu.edu.tr/en/important-information
+  category: department
+  audience: [ceit]
+  requires_auth: false
+  keywords: [önemli bilgiler, important, kurallar]
+  note: { en: "Department rules and practical information for students.", tr: "Öğrenciler için bölüm kuralları ve pratik bilgiler." }
+  last_verified: 2026-09-30
+
+- id: ceit-forms
+  title: { en: CEIT forms, tr: BÖTE formlar }
+  url: https://ceit.metu.edu.tr/en/forms
+  category: department
+  audience: [ceit]
+  requires_auth: false
+  keywords: [form, dilekçe, tez formu, thesis form]
+  note: { en: "Department forms (thesis, committee, petitions).", tr: "Bölüm formları (tez, jüri, dilekçeler)." }
+  last_verified: 2026-09-30
+
+- id: ceit-contact
+  title: { en: CEIT contact (department secretary), tr: BÖTE iletişim }
+  url: https://ceit.metu.edu.tr/en/contact
+  category: contact
+  audience: [ceit]
+  requires_auth: false
+  keywords: [sekreter, secretary, iletişim, contact, telefon]
+  note: { en: "Department secretary contact details.", tr: "Bölüm sekreterliği iletişim bilgileri." }
+  last_verified: 2026-09-30
+
+# ---------- Campus life ----------
+- id: cafeteria
+  title: { en: Cafeteria (daily menu), tr: Kafeterya / yemek listesi }
+  url: https://kafeterya.metu.edu.tr/
+  category: dining
+  audience: [all]
+  requires_auth: false
+  served_by: metu_dining_menu
+  keywords: [yemek, yemekhane, menü, menu, lunch, öğle, akşam, dinner, kahvaltı]
+  note: { en: "Daily cafeteria menu, meal hours and prices.", tr: "Günlük yemek listesi, yemek saatleri ve fiyatlar." }
+  last_verified: 2026-09-30
+
+- id: vehicle-permit-office
+  title: { en: Vehicle permit office, tr: Taşıt Pulu Şefliği }
+  url: https://ihm.metu.edu.tr/tr/tasit-pulu-sefligi
+  category: parking
+  audience: [all]
+  requires_auth: false
+  served_by: metu_vehicle_permit
+  keywords: [araç pulu, taşıt pulu, vehicle permit, sticker, otopark]
+  note: { en: "Vehicle permit rules, fees and contact (tpo@metu.edu.tr).", tr: "Taşıt pulu kuralları, ücretleri ve iletişim (tpo@metu.edu.tr)." }
+  last_verified: 2026-09-30
+
+- id: vehicle-permit-application
+  title: { en: Vehicle permit online application, tr: Taşıt pulu başvuru sistemi }
+  url: https://tasitpulu.metu.edu.tr
+  category: parking
+  audience: [all]
+  requires_auth: tasitpulu
+  keywords: [araç pulu başvuru, taşıt pulu başvurusu, apply vehicle permit]
+  note: { en: "Online application (log in with METU account). Undergraduates need to win the yellow-permit lottery first.", tr: "Online başvuru (ODTÜ hesabıyla giriş). Lisans öğrencilerinin önce sarı pul kurasını kazanması gerekir." }
+  last_verified: 2026-09-30
+
+- id: vehicle-permit-lottery
+  title: { en: Yellow permit lottery (undergraduates), tr: Sarı taşıt pulu kurası }
+  url: https://tpkura.metu.edu.tr
+  seasonal: true
+  category: parking
+  audience: [undergraduate]
+  requires_auth: false
+  keywords: [kura, lottery, sarı pul, yellow permit]
+  note: { en: "Undergraduates apply here in the first week of the fall term; only open during the application window.", tr: "Lisans öğrencileri güz döneminin ilk haftasında buradan başvurur; yalnızca başvuru döneminde açıktır." }
+  last_verified: 2026-09-30
+
+- id: parking-by-permit
+  title: { en: Parking areas by permit type, tr: Taşıt pulu türüne göre park yerleri }
+  url: https://ihm.metu.edu.tr/tr/tasit-pulu-turune-gore-park-yerleri
+  category: parking
+  audience: [all]
+  requires_auth: false
+  served_by: metu_parking_check
+  keywords: [park, otopark, parking, nereye park]
+  note: { en: "Official list of which permit may park where.", tr: "Hangi pulun nereye park edebileceğinin resmi listesi." }
+  last_verified: 2026-09-30
+
+- id: campus-map
+  title: { en: METU campus map, tr: ODTÜ kampüs haritası }
+  url: https://map.metu.edu.tr/
+  category: campus
+  audience: [all]
+  requires_auth: false
+  served_by: metu_campus_place
+  keywords: [harita, map, bina, building, nerede, where]
+  note: { en: "Interactive campus map with buildings, parking lots, ATMs and more.", tr: "Binalar, otoparklar, ATM'ler ve daha fazlasını gösteren etkileşimli kampüs haritası." }
+  last_verified: 2026-09-30
+
+- id: classroom-locations
+  title: { en: Classroom locations, tr: Derslik konumları }
+  url: https://www.metu.edu.tr/location-classrooms-metu-campus
+  category: campus
+  audience: [all]
+  requires_auth: false
+  keywords: [derslik, classroom, sınıf, amfi, u-1, bmb]
+  note: { en: "Where each classroom code is on campus.", tr: "Her derslik kodunun kampüste nerede olduğu." }
+  last_verified: 2026-09-30
+
+- id: ring-live
+  title: { en: Live ring bus tracker, tr: Ring nerede (canlı) }
+  url: https://ring.metu.edu.tr/
+  category: transport
+  audience: [all]
+  requires_auth: false
+  served_by: metu_transport
+  keywords: [ring, servis, shuttle, otobüs, bus, canlı]
+  note: { en: "Live positions of campus ring buses.", tr: "Kampüs ringlerinin canlı konumları." }
+  last_verified: 2026-09-30
+
+- id: transport-office
+  title: { en: Transport office (ring timetables, district shuttles), tr: Taşıt İşletme Müdürlüğü }
+  url: https://tim.metu.edu.tr/tr
+  category: transport
+  audience: [all]
+  requires_auth: false
+  served_by: metu_transport
+  keywords: [ring saatleri, timetable, semt servisi, shuttle, ego, dolmuş, metro]
+  note: { en: "Ring bus timetables, district shuttles, EGO lines and dolmuş route.", tr: "Ring saatleri, semt servisleri, EGO hatları ve dolmuş güzergahı." }
+  last_verified: 2026-09-30
+
+- id: dormitories
+  title: { en: Dormitories, tr: Yurtlar Müdürlüğü }
+  url: https://yurtlar.metu.edu.tr/tr
+  category: dormitory
+  audience: [all]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [yurt, dorm, dormitory, konaklama, oda fiyatı]
+  note: { en: "Dormitory applications, prices and announcements.", tr: "Yurt başvuruları, fiyatlar ve duyurular." }
+  last_verified: 2026-09-30
+
+- id: health-center
+  title: { en: Health and counselling center (Medico), tr: Sağlık ve Rehberlik Merkezi }
+  url: https://srm.metu.edu.tr/tr
+  category: health
+  audience: [all]
+  requires_auth: false
+  keywords: [mediko, medico, doktor, doctor, sağlık, health, psikolojik danışma, counselling, randevu]
+  note: { en: "Which doctors are on duty today, registration and counselling services.", tr: "Bugün hangi doktorların görevde olduğu, kayıt ve psikolojik danışmanlık hizmetleri." }
+  last_verified: 2026-09-30
+
+- id: health-appointments
+  title: { en: Health center appointments, tr: Mediko randevu }
+  url: https://rez-srm.metu.edu.tr/
+  category: health
+  audience: [all]
+  requires_auth: rez
+  keywords: [randevu, appointment, doktor randevusu]
+  note: { en: "Book a doctor appointment (login required).", tr: "Doktor randevusu al (giriş gerekir)." }
+  last_verified: 2026-09-30
+
+- id: sports-facilities
+  title: { en: Sports facilities and hours, tr: Spor tesisleri }
+  url: https://spormd.metu.edu.tr/tr/tesislerimiz
+  category: sports
+  audience: [all]
+  requires_auth: false
+  keywords: [spor, sports, gym, spor salonu, havuz, pool, fitness]
+  note: { en: "Facility list and opening hours; holiday schedules are posted as announcements.", tr: "Tesis listesi ve açılış saatleri; bayram/tatil saatleri duyuru olarak yayımlanır." }
+  last_verified: 2026-09-30
+
+- id: sports-reservations
+  title: { en: Sports facility reservations, tr: Spor tesisi rezervasyon }
+  url: https://rez.metu.edu.tr/
+  category: sports
+  audience: [all]
+  requires_auth: rez
+  keywords: [rezervasyon, reservation, kort, court, saha]
+  note: { en: "Reserve courts and facilities (login required).", tr: "Kort ve tesis rezervasyonu (giriş gerekir)." }
+  last_verified: 2026-09-30
+
+- id: student-clubs-events
+  title: { en: Student clubs and events (Culture Office), tr: Kültür İşleri / etkinlikler }
+  url: https://kim.metu.edu.tr/tr/etkinlikler
+  category: campus
+  audience: [all]
+  requires_auth: false
+  keywords: [etkinlik, event, kulüp, club, topluluk, society, konser]
+  note: { en: "Upcoming events and student societies.", tr: "Yaklaşan etkinlikler ve öğrenci toplulukları." }
+  last_verified: 2026-09-30
+
+- id: library
+  title: { en: METU Library, tr: ODTÜ Kütüphanesi }
+  url: https://lib.metu.edu.tr/en
+  category: library
+  audience: [all]
+  requires_auth: false
+  keywords: [kütüphane, library, kitap, book, çalışma salonu, study hall, açık mı]
+  note: { en: "Library hours (main building is open 24/7), announcements and services.", tr: "Kütüphane saatleri (ana bina 7/24 açık), duyurular ve hizmetler." }
+  last_verified: 2026-09-30
+
+- id: library-catalog
+  title: { en: Library catalog search, tr: Kütüphane katalog tarama }
+  url: https://librarycatalog.metu.edu.tr/
+  category: library
+  audience: [all]
+  requires_auth: false
+  keywords: [kitap ara, book search, katalog, ödünç, borrow]
+  note: { en: "Search books and check availability.", tr: "Kitap ara ve rafta olup olmadığını kontrol et." }
+  last_verified: 2026-09-30
+
+- id: libguides
+  title: { en: Library subject guides (LibGuides), tr: Kütüphane konu rehberleri (LibGuides) }
+  url: https://libguides.lib.metu.edu.tr/
+  category: library
+  audience: [all]
+  requires_auth: false
+  served_by: metu_campus_services
+  keywords: [libguides, konu rehberi, subject guide, research guide, araştırma, veritabanı, database, kaynak, mendeley, open metu]
+  note: { en: "Per-field research guides by the library: key databases, journals, e-books and reference tools for each subject.", tr: "Kütüphanenin alan bazlı araştırma rehberleri: her konu için temel veritabanları, dergiler, e-kitaplar ve kaynak araçları." }
+  last_verified: 2026-10-05
+
+- id: international-office
+  title: { en: International Cooperations Office (Erasmus), tr: Uluslararası İşbirliği Ofisi }
+  url: https://ico.metu.edu.tr/
+  category: international
+  audience: [all]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [erasmus, exchange, değişim, yurtdışı, abroad]
+  note: { en: "Erasmus and exchange calls and deadlines.", tr: "Erasmus ve değişim ilanları ve son tarihleri." }
+  last_verified: 2026-09-30
+
+- id: accessibility-office
+  title: { en: Accessibility (Engelsiz ODTÜ), tr: Engelsiz ODTÜ }
+  url: https://engelsiz.metu.edu.tr/
+  category: campus
+  audience: [all]
+  requires_auth: false
+  keywords: [engelli, disability, erişilebilirlik, accessibility]
+  note: { en: "Support for students with disabilities.", tr: "Engelli öğrencilere destek." }
+  last_verified: 2026-09-30
+
+- id: counselling-pdrm
+  title: { en: Psychological counselling (PDRM), tr: Psikolojik Danışma ve Rehberlik (PDRM) }
+  url: https://srm.metu.edu.tr/tr/pdrm
+  category: health
+  audience: [all]
+  requires_auth: false
+  served_by: metu_campus_services
+  keywords: [psikolog, psychologist, terapi, therapy, psikolojik destek, mental health, ruh sağlığı, danışmanlık, stres, kaygı, anxiety]
+  note: { en: "Free individual and group counselling for METU students (phone 0312 210 4928).", tr: "ODTÜ öğrencilerine ücretsiz bireysel ve grup danışmanlığı (tel. 0312 210 4928)." }
+  last_verified: 2026-10-04
+
+- id: campus-security-duty
+  title: { en: Campus security 24 h duty desk, tr: Kampüs güvenliği 24 saat nöbetçi amirlik }
+  url: https://ihm.metu.edu.tr/tr/iletisim
+  category: contact
+  audience: [all]
+  requires_auth: false
+  served_by: metu_campus_services
+  keywords: [güvenlik, security, acil, emergency, nöbetçi, duty, kayıp, lost, hırsızlık, theft]
+  note: { en: "24 h duty desk: 0312 210 2113 / 2114. Medical emergency: 112; health center first aid is open 24/7.", tr: "24 saat nöbetçi amirlik: 0312 210 2113 / 2114. Tıbbi acil durum: 112; sağlık merkezi ilk yardım 7/24 açık." }
+  last_verified: 2026-10-04
+
+- id: pools
+  title: { en: Swimming pools, tr: Yüzme havuzları }
+  url: https://hm.metu.edu.tr/tr/ogrenci
+  category: sports
+  audience: [all]
+  requires_auth: false
+  served_by: metu_campus_services
+  keywords: [havuz, pool, yüzme, swimming, seans, session]
+  note: { en: "Student session fees and rules; closures and renovations are posted as pool announcements.", tr: "Öğrenci seans ücretleri ve kuralları; kapanış ve tadilatlar havuz duyurularında yayımlanır." }
+  last_verified: 2026-10-04
+
+- id: sports-fees
+  title: { en: Sports facility fees, tr: Spor tesisi kullanım ücretleri }
+  url: https://spormd.metu.edu.tr/tr/hizli-baglantilar
+  category: sports
+  audience: [all]
+  requires_auth: false
+  keywords: [ücret, fee, fiyat, price, halı saha, tenis, padel, fitness]
+  note: { en: "Fee table (published as an image) for pitches, courts, fitness and pools.", tr: "Saha, kort, fitness ve havuz ücret tablosu (görsel olarak yayımlanır)." }
+  last_verified: 2026-10-04
+
+- id: career-center
+  title: { en: Career Planning Center, tr: Kariyer Planlama Merkezi }
+  url: https://kpm.metu.edu.tr/
+  category: campus
+  audience: [all]
+  requires_auth: false
+  served_by: metu_announcements
+  keywords: [kariyer, career, iş ilanı, job, staj, internship, cv, kariyer fuarı, career fair, mentorluk]
+  note: { en: "Job and internship postings, career fairs, CV and interview counselling.", tr: "İş ve staj ilanları, kariyer fuarları, CV ve mülakat danışmanlığı." }
+  last_verified: 2026-10-04
+
+- id: part-time-student-jobs
+  title: { en: Part-time student jobs on campus, tr: Kısmi zamanlı öğrenci ilanları }
+  url: https://www.metu.edu.tr/tr/kismi_zamanli_ogrenci_ilanlari
+  category: campus
+  audience: [all]
+  requires_auth: false
+  keywords: [kısmi zamanlı, part-time, öğrenci asistanı, student assistant, burslu çalışma, iş]
+  note: { en: "Index of METU units that post part-time student positions.", tr: "Kısmi zamanlı öğrenci ilanı veren ODTÜ birimlerinin listesi." }
+  last_verified: 2026-10-04
+
+- id: scholarships
+  title: { en: Scholarships and financial aid, tr: Burs ve yardım başvuruları }
+  url: https://oidb.metu.edu.tr/tr/burs-ve-yardim-basvurulari
+  category: fees
+  audience: [all]
+  requires_auth: false
+  keywords: [burs, scholarship, yardım, financial aid, yemek bursu, kyk]
+  note: { en: "Scholarship types, eligibility and how to apply.", tr: "Burs türleri, koşullar ve başvuru yolu." }
+  last_verified: 2026-10-04
+
+- id: student-clubs
+  title: { en: Student clubs and societies, tr: Öğrenci toplulukları }
+  url: https://kim.metu.edu.tr/tr/ogrenci-topluluklari
+  category: campus
+  audience: [all]
+  requires_auth: false
+  served_by: metu_campus_services
+  keywords: [topluluk, club, society, kulüp, üye olmak, join]
+  note: { en: "All student societies with their academic advisors, rooms and websites.", tr: "Tüm öğrenci toplulukları; akademik danışman, oda ve web sayfaları." }
+  last_verified: 2026-10-04
+
+- id: pc-labs
+  title: { en: Computer labs (hours), tr: PC salonları çalışma saatleri }
+  url: https://faq.cc.metu.edu.tr/tr/sss/pc-salonlari-calisma-saatleri
+  category: it
+  audience: [all]
+  requires_auth: false
+  keywords: [pc salonu, computer lab, bilgisayar, yazıcı, printer, çıktı]
+  note: { en: "Opening hours of BİDB computer labs (dormitory labs are open late).", tr: "BİDB PC salonlarının çalışma saatleri (yurt salonları geç saate kadar açık)." }
+  last_verified: 2026-10-04
+
+- id: eduroam-wifi
+  title: { en: Wi-Fi (meturoam / eduroam) setup, tr: Kablosuz ağ (meturoam / eduroam) kurulumu }
+  url: https://faq.cc.metu.edu.tr/tr/groups/eduroam
+  category: it
+  audience: [all]
+  requires_auth: false
+  keywords: [wifi, wi-fi, eduroam, meturoam, kablosuz, internet, bağlanamıyorum]
+  note: { en: "How to connect to campus Wi-Fi on each device.", tr: "Kampüs kablosuz ağına cihaz bazında bağlanma." }
+  last_verified: 2026-10-04
+
+- id: vpn
+  title: { en: VPN service, tr: VPN hizmeti }
+  url: https://faq.cc.metu.edu.tr/tr/groups/vpn-hizmeti
+  category: it
+  audience: [all]
+  requires_auth: false
+  keywords: [vpn, uzaktan erişim, remote access, kampüs dışı, off campus, e-kaynak, makale]
+  note: { en: "Off-campus access to library e-resources and campus-only services.", tr: "Kampüs dışından kütüphane e-kaynaklarına ve kampüs içi servislere erişim." }
+  last_verified: 2026-10-04
+
+- id: licensed-software
+  title: { en: Licensed software (MATLAB, Office, ANSYS…), tr: Lisanslı yazılımlar }
+  url: https://faq.cc.metu.edu.tr/tr/groups/lisansli-yazilimlar
+  category: it
+  audience: [all]
+  requires_auth: false
+  keywords: [matlab, office, microsoft 365, ansys, autodesk, mathematica, arcgis, lisans, license, yazılım, software]
+  note: { en: "Which software METU licenses and how to install it (downloads work on campus or over VPN).", tr: "ODTÜ'nün lisansladığı yazılımlar ve kurulum (indirme kampüs içinden ya da VPN ile)." }
+  last_verified: 2026-10-04
+
+- id: smart-card-topup
+  title: { en: Smart card (ODTÜ kart) top-up, tr: Akıllı kart para yükleme }
+  url: https://kafeterya.metu.edu.tr/akilli-kart-para-yukleme
+  category: dining
+  audience: [all]
+  requires_auth: false
+  keywords: [akıllı kart, smart card, odtü kart, bakiye, balance, para yükleme, top up, yemek kartı]
+  note: { en: "Ways to load money onto the card used in the cafeteria and other campus services.", tr: "Yemekhane ve diğer kampüs hizmetlerinde kullanılan karta para yükleme yolları." }
+  last_verified: 2026-10-04
+
+- id: international-students-office
+  title: { en: International Students Office, tr: Uluslararası Öğrenci Ofisi }
+  url: https://iso.metu.edu.tr/en
+  category: international
+  audience: [all]
+  requires_auth: false
+  keywords: [international student, yabancı öğrenci, residence permit, ikamet izni, visa, vize, health insurance]
+  note: { en: "Admissions, residence permits, foreign ID number and health insurance for international students.", tr: "Uluslararası öğrenciler için kabul, ikamet izni, yabancı kimlik no ve sağlık sigortası." }
+  last_verified: 2026-10-04
+
+- id: academic-writing-center
+  title: { en: Academic Writing Center, tr: Akademik Yazı Merkezi }
+  url: https://awc.metu.edu.tr/en
+  category: campus
+  audience: [graduate]
+  requires_auth: false
+  keywords: [writing, yazı, tez yazımı, thesis writing, tutorial, makale yazma]
+  note: { en: "One-to-one writing tutorials (graduate students), seminars and handouts.", tr: "Birebir yazım danışmanlığı (lisansüstü), seminerler ve kaynaklar." }
+  last_verified: 2026-10-04
